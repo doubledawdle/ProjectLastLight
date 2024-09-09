@@ -1,5 +1,6 @@
-[gd_scene load_steps=8 format=4 uid="uid://cy8oxmco1gp61"]
+[gd_scene load_steps=9 format=4 uid="uid://cy8oxmco1gp61"]
 
+[ext_resource type="PackedScene" uid="uid://pepc34cmcxho" path="res://game_state_manager.tscn" id="1_7ctym"]
 [ext_resource type="Texture2D" uid="uid://fc6myhc7c8bj" path="res://Tilesets/Grass.png" id="1_xumu1"]
 [ext_resource type="PackedScene" uid="uid://diwqd6tutq3r4" path="res://player.tscn" id="2_81exq"]
 [ext_resource type="PackedScene" uid="uid://c5kgcri1r6c3u" path="res://chest.tscn" id="2_r8dda"]
@@ -84,6 +85,8 @@ texture = ExtResource("1_xumu1")
 sources/0 = SubResource("TileSetAtlasSource_jcl1p")
 
 [node name="Node2D" type="Node2D"]
+
+[node name="GameStateManager" parent="." instance=ExtResource("1_7ctym")]
 
 [node name="Player" parent="." instance=ExtResource("2_81exq")]
 position = Vector2(960, 540)

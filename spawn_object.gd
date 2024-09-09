@@ -2,6 +2,7 @@ extends Button
 
 @export var spawn_object: PackedScene
 @export var spawn_pos: Vector2
+@onready var game_state_manager = $"../../GameStateManager"
 var obj
 
 func _ready() -> void:
@@ -15,3 +16,4 @@ func _process(delta: float) -> void:
 		var instance: Node2D = obj.instantiate()
 		instance.position = Vector2(spawn_pos)
 		get_node("/root").add_child(instance)
+		game_state_manager.enter_building_state()
