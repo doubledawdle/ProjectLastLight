@@ -1,9 +1,11 @@
-[gd_scene load_steps=7 format=4 uid="uid://cy8oxmco1gp61"]
+[gd_scene load_steps=9 format=4 uid="uid://cy8oxmco1gp61"]
 
+[ext_resource type="PackedScene" uid="uid://pepc34cmcxho" path="res://game_state_manager.tscn" id="1_7ctym"]
 [ext_resource type="Texture2D" uid="uid://fc6myhc7c8bj" path="res://Tilesets/Grass.png" id="1_xumu1"]
 [ext_resource type="PackedScene" uid="uid://diwqd6tutq3r4" path="res://player.tscn" id="2_81exq"]
 [ext_resource type="PackedScene" uid="uid://c5kgcri1r6c3u" path="res://chest.tscn" id="2_r8dda"]
 [ext_resource type="PackedScene" uid="uid://e7562cjsv7yq" path="res://main_ui.tscn" id="3_00poq"]
+[ext_resource type="Texture2D" uid="uid://bhvoeyxv0luci" path="res://lighthouse_base_1.png" id="5_e8hg5"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_jcl1p"]
 texture = ExtResource("1_xumu1")
@@ -84,6 +86,8 @@ sources/0 = SubResource("TileSetAtlasSource_jcl1p")
 
 [node name="Node2D" type="Node2D"]
 
+[node name="GameStateManager" parent="." instance=ExtResource("1_7ctym")]
+
 [node name="Player" parent="." instance=ExtResource("2_81exq")]
 position = Vector2(960, 540)
 
@@ -95,3 +99,9 @@ tile_set = SubResource("TileSet_ditm8")
 
 [node name="chest" parent="." instance=ExtResource("2_r8dda")]
 position = Vector2(1196, 695)
+
+[node name="LighthouseBase" type="Sprite2D" parent="."]
+texture_filter = 2
+position = Vector2(930, 137)
+scale = Vector2(0.36817, 0.36817)
+texture = ExtResource("5_e8hg5")
