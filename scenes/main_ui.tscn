@@ -1,0 +1,47 @@
+[gd_scene load_steps=4 format=3 uid="uid://e7562cjsv7yq"]
+
+[ext_resource type="PackedScene" uid="uid://f8y557b1jr5h" path="res://scenes/spawn_button.tscn" id="1_nuhjk"]
+[ext_resource type="PackedScene" uid="uid://v6unhwxagatg" path="res://scenes/chair.tscn" id="2_fbjii"]
+[ext_resource type="Texture2D" uid="uid://btk6akfnk6t3x" path="res://Objects/chair.png" id="2_x6ohn"]
+
+[node name="Main_UI" type="CanvasLayer"]
+
+[node name="Spawn_Button" parent="." instance=ExtResource("1_nuhjk")]
+offset_left = 886.0
+offset_top = 960.0
+offset_right = -988.0
+focus_mode = 0
+icon = ExtResource("2_x6ohn")
+icon_alignment = 1
+expand_icon = true
+object_to_spawn = ExtResource("2_fbjii")
+
+[node name="Spawn_Button2" parent="." instance=ExtResource("1_nuhjk")]
+offset_left = 977.0
+offset_top = 960.0
+offset_right = -897.0
+focus_mode = 0
+icon = ExtResource("2_x6ohn")
+icon_alignment = 1
+expand_icon = true
+object_to_spawn = ExtResource("2_fbjii")
+
+[node name="Spawn_Button3" parent="." instance=ExtResource("1_nuhjk")]
+offset_left = 931.0
+offset_top = 960.0
+offset_right = -943.0
+focus_mode = 0
+icon = ExtResource("2_x6ohn")
+icon_alignment = 1
+expand_icon = true
+object_to_spawn = ExtResource("2_fbjii")
+
+[node name="Spawn_Button4" parent="." instance=ExtResource("1_nuhjk")]
+offset_left = 840.0
+offset_top = 960.0
+offset_right = -1034.0
+focus_mode = 0
+icon = ExtResource("2_x6ohn")
+icon_alignment = 1
+expand_icon = true
+object_to_spawn = ExtResource("2_fbjii")

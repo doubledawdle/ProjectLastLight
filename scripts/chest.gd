@@ -6,7 +6,6 @@ var play_anim := true
 func _process(delta: float) -> void:
 	if $Interactable.interacted && play_anim:
 		play("chest_open")
-		
 
 
 func _on_animation_finished() -> void:
