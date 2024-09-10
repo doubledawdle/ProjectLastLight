@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cd4hievnqsw5g"
-path="res://.godot/imported/Free_Chicken_House.png-ded53f07433452fe79801d0fc18ddc1a.ctex"
+uid="uid://db4vf66e3htas"
+path="res://.godot/imported/lighthouse.png-8adb8106e46b4564aa5d75d3ef804301.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Objects/Free_Chicken_House.png"
-dest_files=["res://.godot/imported/Free_Chicken_House.png-ded53f07433452fe79801d0fc18ddc1a.ctex"]
+source_file="res://Objects/lighthouse.png"
+dest_files=["res://.godot/imported/lighthouse.png-8adb8106e46b4564aa5d75d3ef804301.ctex"]
 
 [params]
 

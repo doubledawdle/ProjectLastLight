@@ -1,0 +1,25 @@
+[gd_scene load_steps=5 format=3 uid="uid://mrg3osu45o3h"]
+
+[ext_resource type="Texture2D" uid="uid://cophaahcxdyrw" path="res://Objects/barricade1BP.png" id="1_fmd3m"]
+[ext_resource type="Script" path="res://scenes/build_preview.gd" id="2_fwmds"]
+[ext_resource type="PackedScene" uid="uid://cqtyy6by08pga" path="res://scenes/inventory_item.tscn" id="3_8frcj"]
+[ext_resource type="Texture2D" uid="uid://bx5eswot0hqxx" path="res://Objects/barricade1.png" id="4_j1nwi"]
+
+[node name="Barricade_Level_01" type="Sprite2D" node_paths=PackedStringArray("blueprint_sprite", "game_sprite")]
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("1_fmd3m")
+offset = Vector2(12, -6)
+script = ExtResource("2_fwmds")
+blueprint_sprite = NodePath("Barricade1bp")
+game_sprite = NodePath("Barricade1")
+
+[node name="InventoryItem" parent="." instance=ExtResource("3_8frcj")]
+scale = Vector2(5, 3)
+
+[node name="Barricade1bp" type="Sprite2D" parent="."]
+visible = false
+texture = ExtResource("1_fmd3m")
+
+[node name="Barricade1" type="Sprite2D" parent="."]
+visible = false
+texture = ExtResource("4_j1nwi")

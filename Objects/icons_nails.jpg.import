@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bvts6eqwt01lk"
-path="res://.godot/imported/hit_marker.png-dbdedcb2885bd32f63aa35956b3c5b10.ctex"
+uid="uid://brvo674cohjd2"
+path="res://.godot/imported/icons_nails.jpg-3ead541b3e182a2ad8142d87f579dcee.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Objects/hit_marker.png"
-dest_files=["res://.godot/imported/hit_marker.png-dbdedcb2885bd32f63aa35956b3c5b10.ctex"]
+source_file="res://Objects/icons_nails.jpg"
+dest_files=["res://.godot/imported/icons_nails.jpg-3ead541b3e182a2ad8142d87f579dcee.ctex"]
 
 [params]
 

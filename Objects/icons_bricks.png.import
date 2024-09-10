@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://ddig3uhwse4fr"
-path="res://.godot/imported/Basic_tools_and_meterials.png-3ece635555e717586de73f86bd47f2d3.ctex"
+uid="uid://deeva5xbxc4hn"
+path="res://.godot/imported/icons_bricks.png-7b979fe94cceebf6a858a396b783a690.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Objects/Basic_tools_and_meterials.png"
-dest_files=["res://.godot/imported/Basic_tools_and_meterials.png-3ece635555e717586de73f86bd47f2d3.ctex"]
+source_file="res://Objects/icons_bricks.png"
+dest_files=["res://.godot/imported/icons_bricks.png-7b979fe94cceebf6a858a396b783a690.ctex"]
 
 [params]
 

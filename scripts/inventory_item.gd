@@ -6,7 +6,7 @@ var is_preview := true
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
 	if is_preview:
-		if Input.is_action_just_pressed("ui_cancel"):
+		if $Interactable.interacted:
 			get_parent().queue_free()
 		get_parent().position = get_viewport().get_mouse_position() - preview_offset * delta
 	
