@@ -1,0 +1,18 @@
+[gd_resource type="SpriteFrames" load_steps=3 format=3 uid="uid://c8fcjuya8t0kw"]
+
+[ext_resource type="Texture2D" uid="uid://btk6akfnk6t3x" path="res://Objects/chair.png" id="1_jyuuq"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_jnodb"]
+atlas = ExtResource("1_jyuuq")
+region = Rect2(0, 0, 16, 32)
+
+[resource]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_jnodb")
+}],
+"loop": false,
+"name": &"default",
+"speed": 5.0
+}]

@@ -1,0 +1,7 @@
+[gd_scene load_steps=2 format=3 uid="uid://e7562cjsv7yq"]
+
+[ext_resource type="PackedScene" uid="uid://f8y557b1jr5h" path="res://spawn_button.tscn" id="1_nuhjk"]
+
+[node name="Main_UI" type="CanvasLayer"]
+
+[node name="Spawn_Button" parent="." instance=ExtResource("1_nuhjk")]

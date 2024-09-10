@@ -1,0 +1,14 @@
+[gd_scene load_steps=4 format=3 uid="uid://c5kgcri1r6c3u"]
+
+[ext_resource type="SpriteFrames" uid="uid://bkd6pt0g7jivr" path="res://resources/chest.tres" id="1_o31ct"]
+[ext_resource type="Script" path="res://scripts/chest.gd" id="2_bdmw1"]
+[ext_resource type="PackedScene" uid="uid://dx2lr2powi77b" path="res://scenes/interactable.tscn" id="2_ejx8r"]
+
+[node name="chest" type="AnimatedSprite2D"]
+sprite_frames = ExtResource("1_o31ct")
+animation = &"chest_open"
+script = ExtResource("2_bdmw1")
+
+[node name="Interactable" parent="." instance=ExtResource("2_ejx8r")]
+
+[connection signal="animation_finished" from="." to="." method="_on_animation_finished"]

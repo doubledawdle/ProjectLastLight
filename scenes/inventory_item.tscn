@@ -1,0 +1,9 @@
+[gd_scene load_steps=3 format=3 uid="uid://cqtyy6by08pga"]
+
+[ext_resource type="Script" path="res://scripts/inventory_item.gd" id="1_l1moy"]
+[ext_resource type="PackedScene" uid="uid://dx2lr2powi77b" path="res://scenes/interactable.tscn" id="2_5q12v"]
+
+[node name="InventoryItem" type="Node2D"]
+script = ExtResource("1_l1moy")
+
+[node name="Interactable" parent="." instance=ExtResource("2_5q12v")]

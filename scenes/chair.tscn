@@ -1,0 +1,10 @@
+[gd_scene load_steps=3 format=3 uid="uid://v6unhwxagatg"]
+
+[ext_resource type="PackedScene" uid="uid://cqtyy6by08pga" path="res://scenes/inventory_item.tscn" id="2_np5lt"]
+[ext_resource type="SpriteFrames" uid="uid://c8fcjuya8t0kw" path="res://resources/chair.tres" id="2_vjf2t"]
+
+[node name="Chair" type="AnimatedSprite2D"]
+scale = Vector2(2, 2)
+sprite_frames = ExtResource("2_vjf2t")
+
+[node name="InventoryItem" parent="." instance=ExtResource("2_np5lt")]

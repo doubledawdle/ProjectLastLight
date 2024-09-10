@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bvts6eqwt01lk"
-path="res://.godot/imported/hit_marker.png-125833c6373e24a089b67dd22c940a87.ctex"
+uid="uid://bhvoeyxv0luci"
+path="res://.godot/imported/lighthouse_base_1.png-02dc9e0a3069943cd958066c26783307.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://hit_marker.png"
-dest_files=["res://.godot/imported/hit_marker.png-125833c6373e24a089b67dd22c940a87.ctex"]
+source_file="res://Objects/lighthouse_base_1.png"
+dest_files=["res://.godot/imported/lighthouse_base_1.png-02dc9e0a3069943cd958066c26783307.ctex"]
 
 [params]
 
