@@ -7,9 +7,10 @@
 [node name="Main_UI" type="CanvasLayer"]
 
 [node name="Spawn_Button" parent="." instance=ExtResource("1_nuhjk")]
-offset_left = 886.0
-offset_top = 960.0
-offset_right = -988.0
+offset_left = 856.0
+offset_top = 948.0
+offset_right = -1014.0
+offset_bottom = -32.0
 focus_mode = 0
 icon = ExtResource("2_x6ohn")
 icon_alignment = 1
@@ -17,9 +18,10 @@ expand_icon = true
 object_to_spawn = ExtResource("2_fbjii")
 
 [node name="Spawn_Button2" parent="." instance=ExtResource("1_nuhjk")]
-offset_left = 977.0
-offset_top = 960.0
-offset_right = -897.0
+offset_left = 906.0
+offset_top = 948.0
+offset_right = -964.0
+offset_bottom = -32.0
 focus_mode = 0
 icon = ExtResource("2_x6ohn")
 icon_alignment = 1
@@ -27,9 +29,10 @@ expand_icon = true
 object_to_spawn = ExtResource("2_fbjii")
 
 [node name="Spawn_Button3" parent="." instance=ExtResource("1_nuhjk")]
-offset_left = 931.0
-offset_top = 960.0
-offset_right = -943.0
+offset_left = 956.0
+offset_top = 948.0
+offset_right = -914.0
+offset_bottom = -32.0
 focus_mode = 0
 icon = ExtResource("2_x6ohn")
 icon_alignment = 1
@@ -37,9 +40,10 @@ expand_icon = true
 object_to_spawn = ExtResource("2_fbjii")
 
 [node name="Spawn_Button4" parent="." instance=ExtResource("1_nuhjk")]
-offset_left = 840.0
-offset_top = 960.0
-offset_right = -1034.0
+offset_left = 1006.0
+offset_top = 948.0
+offset_right = -864.0
+offset_bottom = -32.0
 focus_mode = 0
 icon = ExtResource("2_x6ohn")
 icon_alignment = 1
