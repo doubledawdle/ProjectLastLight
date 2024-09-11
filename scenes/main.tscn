@@ -2,8 +2,8 @@
 
 [ext_resource type="PackedScene" uid="uid://diwqd6tutq3r4" path="res://scenes/player.tscn" id="1_rnt2r"]
 [ext_resource type="PackedScene" uid="uid://e7562cjsv7yq" path="res://scenes/main_ui.tscn" id="3_anoo3"]
+[ext_resource type="Texture2D" uid="uid://b6p8ffbid1uqf" path="res://Objects/foreground.png" id="4_bb0la"]
 [ext_resource type="PackedScene" uid="uid://c5kgcri1r6c3u" path="res://scenes/chest.tscn" id="4_fr8jv"]
-[ext_resource type="Texture2D" uid="uid://oixnqy7f8fa2" path="res://Objects/foreground.png" id="7_vv5wx"]
 
 [node name="Node2D" type="Node2D"]
 
@@ -18,4 +18,4 @@ scale = Vector2(2, 2)
 
 [node name="Foreground" type="Sprite2D" parent="."]
 position = Vector2(960, 540)
-texture = ExtResource("7_vv5wx")
+texture = ExtResource("4_bb0la")

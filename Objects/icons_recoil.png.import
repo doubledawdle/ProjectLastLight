@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://b6p8ffbid1uqf"
-path="res://.godot/imported/foreground.png-7e1bcbf85d09612f9f2414c3c25db50c.ctex"
+uid="uid://dsvtex2vjhr4l"
+path="res://.godot/imported/icons_recoil.png-11f55201754b5aba93fc14dfa735fb3d.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Objects/foreground.png"
-dest_files=["res://.godot/imported/foreground.png-7e1bcbf85d09612f9f2414c3c25db50c.ctex"]
+source_file="res://Objects/icons_recoil.png"
+dest_files=["res://.godot/imported/icons_recoil.png-11f55201754b5aba93fc14dfa735fb3d.ctex"]
 
 [params]
 
