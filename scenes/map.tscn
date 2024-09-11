@@ -1,0 +1,14 @@
+[gd_scene load_steps=3 format=3 uid="uid://c00alaw3ih0xw"]
+
+[ext_resource type="Texture2D" uid="uid://2t34bfi6qgw4" path="res://Objects/map.png" id="1_5doex"]
+[ext_resource type="PackedScene" uid="uid://c01ebbg1a8bs4" path="res://scenes/location.tscn" id="2_1xm2q"]
+
+[node name="Node2D" type="Node2D"]
+
+[node name="Map" type="Sprite2D" parent="."]
+position = Vector2(959.482, 541.25)
+scale = Vector2(0.772083, 0.772083)
+texture = ExtResource("1_5doex")
+
+[node name="Location" parent="." instance=ExtResource("2_1xm2q")]
+position = Vector2(356, 309)
