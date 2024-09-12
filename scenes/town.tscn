@@ -1,0 +1,12 @@
+[gd_scene load_steps=3 format=3 uid="uid://b7l0wpdiq1f7h"]
+
+[ext_resource type="Texture2D" uid="uid://rp2qr6jwqdsu" path="res://Objects/townicon.png" id="1_a1kkl"]
+[ext_resource type="PackedScene" uid="uid://dx2lr2powi77b" path="res://scenes/interactable.tscn" id="2_jwllm"]
+
+[node name="Town" type="Sprite2D"]
+texture = ExtResource("1_a1kkl")
+
+[node name="Interactable" parent="." instance=ExtResource("2_jwllm")]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Interactable"]
+polygon = PackedVector2Array(-173, -518, -483, -17, -483, 273, 594, 273, 593, -517)

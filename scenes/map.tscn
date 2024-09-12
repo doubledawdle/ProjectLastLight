@@ -1,14 +1,30 @@
-[gd_scene load_steps=3 format=3 uid="uid://c00alaw3ih0xw"]
+[gd_scene load_steps=5 format=3 uid="uid://27ahtx5ktldo"]
 
 [ext_resource type="Texture2D" uid="uid://2t34bfi6qgw4" path="res://Objects/map.png" id="1_5doex"]
-[ext_resource type="PackedScene" uid="uid://c01ebbg1a8bs4" path="res://scenes/location.tscn" id="2_1xm2q"]
+[ext_resource type="PackedScene" uid="uid://ba7f175q3ek5o" path="res://scenes/forest.tscn" id="2_06c3d"]
+[ext_resource type="PackedScene" uid="uid://bt85ox36t6ehg" path="res://scenes/church.tscn" id="2_hqde0"]
+[ext_resource type="PackedScene" uid="uid://b7l0wpdiq1f7h" path="res://scenes/town.tscn" id="3_75xf3"]
 
-[node name="Node2D" type="Node2D"]
+[node name="Map" type="Node2D"]
 
-[node name="Map" type="Sprite2D" parent="."]
+[node name="Panel" type="Panel" parent="."]
+offset_right = 1918.0
+offset_bottom = 1079.0
+mouse_filter = 2
+
+[node name="Map_Texture" type="Sprite2D" parent="."]
 position = Vector2(959.482, 541.25)
 scale = Vector2(0.772083, 0.772083)
 texture = ExtResource("1_5doex")
 
-[node name="Location" parent="." instance=ExtResource("2_1xm2q")]
-position = Vector2(356, 309)
+[node name="Sprite2D" parent="Map_Texture" instance=ExtResource("2_06c3d")]
+position = Vector2(165.161, -214.031)
+scale = Vector2(0.2, 0.2)
+
+[node name="Church" parent="." instance=ExtResource("2_hqde0")]
+position = Vector2(480, 715)
+scale = Vector2(0.184559, 0.184559)
+
+[node name="Town" parent="." instance=ExtResource("3_75xf3")]
+position = Vector2(1179, 741)
+scale = Vector2(0.2, 0.2)

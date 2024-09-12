@@ -1,0 +1,16 @@
+[gd_scene load_steps=4 format=3 uid="uid://bt85ox36t6ehg"]
+
+[ext_resource type="Texture2D" uid="uid://e4pwqo6l1co0" path="res://Objects/ChurchIcon.png" id="1_m8qg8"]
+[ext_resource type="Script" path="res://scripts/location.gd" id="2_oowpm"]
+[ext_resource type="PackedScene" uid="uid://dx2lr2powi77b" path="res://scenes/interactable.tscn" id="3_8epvj"]
+
+[node name="Church" type="Sprite2D"]
+texture = ExtResource("1_m8qg8")
+script = ExtResource("2_oowpm")
+icon = ExtResource("1_m8qg8")
+
+[node name="Interactable" parent="." instance=ExtResource("3_8epvj")]
+scale = Vector2(10, 10)
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Interactable"]
+polygon = PackedVector2Array(23.6, -57.2, 14, -44.4, 14.9, -31, -10.5, -29.7, -27.5, -2.5, -27.3, 29.2, 26.6, 29.8, 48, 5.5, 47.8, -25.7, 35.1, -34, 34.2, -44.6)

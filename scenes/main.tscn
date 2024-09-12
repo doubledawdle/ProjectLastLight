@@ -1,14 +1,19 @@
-[gd_scene load_steps=5 format=3 uid="uid://cy8oxmco1gp61"]
+[gd_scene load_steps=7 format=3 uid="uid://cy8oxmco1gp61"]
 
+[ext_resource type="PackedScene" uid="uid://pepc34cmcxho" path="res://scenes/game_state_manager.tscn" id="1_4ewyr"]
 [ext_resource type="PackedScene" uid="uid://diwqd6tutq3r4" path="res://scenes/player.tscn" id="1_rnt2r"]
+[ext_resource type="PackedScene" uid="uid://27ahtx5ktldo" path="res://scenes/map.tscn" id="2_kb4ue"]
 [ext_resource type="PackedScene" uid="uid://e7562cjsv7yq" path="res://scenes/main_ui.tscn" id="3_anoo3"]
 [ext_resource type="Texture2D" uid="uid://b6p8ffbid1uqf" path="res://Objects/foreground.png" id="4_bb0la"]
 [ext_resource type="PackedScene" uid="uid://c5kgcri1r6c3u" path="res://scenes/chest.tscn" id="4_fr8jv"]
 
 [node name="Node2D" type="Node2D"]
 
+[node name="GameStateManager" parent="." instance=ExtResource("1_4ewyr")]
+
 [node name="Player" parent="." instance=ExtResource("1_rnt2r")]
 position = Vector2(960, 540)
+map_scene = ExtResource("2_kb4ue")
 
 [node name="Main_UI" parent="." instance=ExtResource("3_anoo3")]
 
