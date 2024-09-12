@@ -1,25 +1,29 @@
-[gd_scene load_steps=5 format=3 uid="uid://c54i0dno56pns"]
+[gd_scene load_steps=7 format=3 uid="uid://bp28m7o7sdhyw"]
 
 [ext_resource type="Texture2D" uid="uid://cophaahcxdyrw" path="res://Objects/barricade1BP.png" id="1_5xnkl"]
-[ext_resource type="Script" path="res://scenes/build_preview.gd" id="2_e7s15"]
+[ext_resource type="Script" path="res://scripts/barricade.gd" id="2_jgl1n"]
 [ext_resource type="PackedScene" uid="uid://cqtyy6by08pga" path="res://scenes/inventory_item.tscn" id="3_2nkny"]
-[ext_resource type="Texture2D" uid="uid://bx5eswot0hqxx" path="res://Objects/barricade1.png" id="4_c4dus"]
+[ext_resource type="Texture2D" uid="uid://dylyxlrdd1jjp" path="res://Objects/barricade3.png" id="3_qyywq"]
+[ext_resource type="PackedScene" uid="uid://dx2lr2powi77b" path="res://scenes/interactable.tscn" id="5_fx0ay"]
 
-[node name="Barricade_Level_01" type="Sprite2D" node_paths=PackedStringArray("blueprint_sprite", "game_sprite")]
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ubnm7"]
+size = Vector2(16.4, 22.6667)
+
+[node name="Barricade_Level_03" type="Sprite2D"]
 scale = Vector2(0.5, 0.5)
 texture = ExtResource("1_5xnkl")
 offset = Vector2(12, -6)
-script = ExtResource("2_e7s15")
-blueprint_sprite = NodePath("Barricade1bp")
-game_sprite = NodePath("Barricade1")
+script = ExtResource("2_jgl1n")
+blueprint_icon = ExtResource("1_5xnkl")
+icon = ExtResource("3_qyywq")
 
-[node name="InventoryItem" parent="." instance=ExtResource("3_2nkny")]
+[node name="InventoryItem" parent="." node_paths=PackedStringArray("interactable") instance=ExtResource("3_2nkny")]
+scale = Vector2(5, 3)
+interactable = NodePath("../Interactable")
+
+[node name="Interactable" parent="." instance=ExtResource("5_fx0ay")]
 scale = Vector2(5, 3)
 
-[node name="Barricade1bp" type="Sprite2D" parent="."]
-visible = false
-texture = ExtResource("1_5xnkl")
-
-[node name="Barricade1" type="Sprite2D" parent="."]
-visible = false
-texture = ExtResource("4_c4dus")
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Interactable"]
+position = Vector2(-0.600001, -2)
+shape = SubResource("RectangleShape2D_ubnm7")

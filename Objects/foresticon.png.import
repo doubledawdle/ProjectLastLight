@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://b6p8ffbid1uqf"
-path="res://.godot/imported/foreground.png-7e1bcbf85d09612f9f2414c3c25db50c.ctex"
+uid="uid://bgl18jaqcgcm1"
+path="res://.godot/imported/foresticon.png-27e4f70f2cc48dc753a7d9654b2a6c87.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Objects/foreground.png"
-dest_files=["res://.godot/imported/foreground.png-7e1bcbf85d09612f9f2414c3c25db50c.ctex"]
+source_file="res://Objects/foresticon.png"
+dest_files=["res://.godot/imported/foresticon.png-27e4f70f2cc48dc753a7d9654b2a6c87.ctex"]
 
 [params]
 

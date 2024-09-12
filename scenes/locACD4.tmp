@@ -1,0 +1,9 @@
+[gd_scene load_steps=3 format=3 uid="uid://c01ebbg1a8bs4"]
+
+[ext_resource type="Texture2D" uid="uid://f4cdl1bvs4w2" path="res://Objects/icon.svg" id="1_06wcp"]
+[ext_resource type="PackedScene" uid="uid://dx2lr2powi77b" path="res://scenes/interactable.tscn" id="2_lne2f"]
+
+[node name="Sprite2D" type="Sprite2D"]
+texture = ExtResource("1_06wcp")
+
+[node name="Interactable" parent="." instance=ExtResource("2_lne2f")]

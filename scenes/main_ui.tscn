@@ -1,23 +1,28 @@
-[gd_scene load_steps=4 format=3 uid="uid://e7562cjsv7yq"]
+[gd_scene load_steps=7 format=3 uid="uid://e7562cjsv7yq"]
 
 [ext_resource type="PackedScene" uid="uid://f8y557b1jr5h" path="res://scenes/spawn_button.tscn" id="1_nuhjk"]
+[ext_resource type="Script" path="res://scripts/main_ui.gd" id="1_oeoc0"]
 [ext_resource type="Texture2D" uid="uid://bx5eswot0hqxx" path="res://Objects/barricade1.png" id="2_buqrb"]
-[ext_resource type="PackedScene" uid="uid://7jxglqfd668r" path="res://scenes/barricade_level_01.tscn" id="3_rgxru"]
+[ext_resource type="PackedScene" uid="uid://xte5awinp3e7" path="res://scenes/barricade_level_01.tscn" id="3_rgxru"]
+[ext_resource type="PackedScene" uid="uid://c3bwbhyqad652" path="res://scenes/barricade_level_02.tscn" id="5_8lx8h"]
+[ext_resource type="PackedScene" uid="uid://bp28m7o7sdhyw" path="res://scenes/barricade_level_03.tscn" id="6_axsyn"]
 
 [node name="Main_UI" type="CanvasLayer"]
+script = ExtResource("1_oeoc0")
 
-[node name="Panel" type="Panel" parent="."]
+[node name="CraftingPanel" type="Panel" parent="."]
 offset_left = 859.0
 offset_top = 987.0
 offset_right = 1056.0
 offset_bottom = 1027.0
 
-[node name="Spawn_Button" parent="." instance=ExtResource("1_nuhjk")]
+[node name="Spawn_Button" parent="CraftingPanel" instance=ExtResource("1_nuhjk")]
 clip_contents = true
-offset_left = 811.0
-offset_top = 964.0
-offset_right = -945.0
-offset_bottom = -30.0
+layout_mode = 1
+offset_left = -33.0
+offset_top = -14.0
+offset_right = -105.0
+offset_bottom = 11.0
 focus_mode = 0
 icon = ExtResource("2_buqrb")
 flat = true
@@ -25,28 +30,30 @@ icon_alignment = 1
 expand_icon = true
 object_to_spawn = ExtResource("3_rgxru")
 
-[node name="Spawn_Button2" parent="." instance=ExtResource("1_nuhjk")]
+[node name="Spawn_Button2" parent="CraftingPanel" instance=ExtResource("1_nuhjk")]
 clip_contents = true
-offset_left = 881.0
-offset_top = 964.0
-offset_right = -875.0
-offset_bottom = -30.0
+layout_mode = 1
+offset_left = 41.0
+offset_top = -14.0
+offset_right = -31.0
+offset_bottom = 11.0
 focus_mode = 0
 icon = ExtResource("2_buqrb")
 flat = true
 icon_alignment = 1
 expand_icon = true
-object_to_spawn = ExtResource("3_rgxru")
+object_to_spawn = ExtResource("5_8lx8h")
 
-[node name="Spawn_Button3" parent="." instance=ExtResource("1_nuhjk")]
+[node name="Spawn_Button3" parent="CraftingPanel" instance=ExtResource("1_nuhjk")]
 clip_contents = true
-offset_left = 956.0
-offset_top = 964.0
-offset_right = -800.0
-offset_bottom = -30.0
+layout_mode = 1
+offset_left = 116.0
+offset_top = -14.0
+offset_right = 44.0
+offset_bottom = 11.0
 focus_mode = 0
 icon = ExtResource("2_buqrb")
 flat = true
 icon_alignment = 1
 expand_icon = true
-object_to_spawn = ExtResource("3_rgxru")
+object_to_spawn = ExtResource("6_axsyn")

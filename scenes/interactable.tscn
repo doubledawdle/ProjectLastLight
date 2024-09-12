@@ -1,14 +1,9 @@
-[gd_scene load_steps=3 format=3 uid="uid://dx2lr2powi77b"]
+[gd_scene load_steps=2 format=3 uid="uid://dx2lr2powi77b"]
 
 [ext_resource type="Script" path="res://scripts/interactable.gd" id="1_5wiq0"]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_gvg8d"]
-
 [node name="Interactable" type="Area2D"]
 script = ExtResource("1_5wiq0")
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-shape = SubResource("RectangleShape2D_gvg8d")
 
 [connection signal="input_event" from="." to="." method="_on_input_event"]
 [connection signal="mouse_entered" from="." to="." method="_on_mouse_entered"]
