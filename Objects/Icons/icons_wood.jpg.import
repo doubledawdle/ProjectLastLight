@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cxo40722d0of"
-path="res://.godot/imported/icons_metal.jpg-38317b411d73d86b010687baa1286d02.ctex"
+uid="uid://31mk5xvc7m4p"
+path="res://.godot/imported/icons_wood.jpg-9f40ce58a42e830220fc04b195ab18f6.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Objects/icons_metal.jpg"
-dest_files=["res://.godot/imported/icons_metal.jpg-38317b411d73d86b010687baa1286d02.ctex"]
+source_file="res://Objects/Icons/icons_wood.jpg"
+dest_files=["res://.godot/imported/icons_wood.jpg-9f40ce58a42e830220fc04b195ab18f6.ctex"]
 
 [params]
 

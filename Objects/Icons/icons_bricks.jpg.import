@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dhjbcmgjas85b"
-path="res://.godot/imported/icons_fuel.jpg-9e430663029916d3fefadc59d6f05a14.ctex"
+uid="uid://b7m6iebe3ryv1"
+path="res://.godot/imported/icons_bricks.jpg-0d34661aa2b9181cc3c62fc75991ad4c.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Objects/icons_fuel.jpg"
-dest_files=["res://.godot/imported/icons_fuel.jpg-9e430663029916d3fefadc59d6f05a14.ctex"]
+source_file="res://Objects/Icons/icons_bricks.jpg"
+dest_files=["res://.godot/imported/icons_bricks.jpg-0d34661aa2b9181cc3c62fc75991ad4c.ctex"]
 
 [params]
 

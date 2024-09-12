@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://b8go8l8qil1vi"
-path="res://.godot/imported/title.png-0d5fd3a9e6e756e7a681c2c72b14a94d.ctex"
+uid="uid://f4qn4pw430b4"
+path="res://.godot/imported/icons_rope.png-0e89654d98decd687a736d2d602e1e93.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Objects/Map_Icons/title.png"
-dest_files=["res://.godot/imported/title.png-0d5fd3a9e6e756e7a681c2c72b14a94d.ctex"]
+source_file="res://Objects/Icons/icons_rope.png"
+dest_files=["res://.godot/imported/icons_rope.png-0e89654d98decd687a736d2d602e1e93.ctex"]
 
 [params]
 

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://pfjpxcrhpclv"
-path="res://.godot/imported/icons_sparkplug.jpg-048c309b09f53da89ef38d5919734d55.ctex"
+uid="uid://qkvasdvu27hb"
+path="res://.godot/imported/foresticon.png-860cd29c18c89405d75e581b9e9ce8b0.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Objects/icons_sparkplug.jpg"
-dest_files=["res://.godot/imported/icons_sparkplug.jpg-048c309b09f53da89ef38d5919734d55.ctex"]
+source_file="res://Objects/Map/foresticon.png"
+dest_files=["res://.godot/imported/foresticon.png-860cd29c18c89405d75e581b9e9ce8b0.ctex"]
 
 [params]
 

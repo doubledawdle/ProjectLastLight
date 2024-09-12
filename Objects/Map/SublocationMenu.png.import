@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://qkvasdvu27hb"
-path="res://.godot/imported/foresticon.png-6343db9ed972d92b339db6102930b2f8.ctex"
+uid="uid://cg36qjs84adxa"
+path="res://.godot/imported/SublocationMenu.png-08a341767c0b326550ab5e6377e2b10f.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Objects/Map_Icons/foresticon.png"
-dest_files=["res://.godot/imported/foresticon.png-6343db9ed972d92b339db6102930b2f8.ctex"]
+source_file="res://Objects/Map/SublocationMenu.png"
+dest_files=["res://.godot/imported/SublocationMenu.png-08a341767c0b326550ab5e6377e2b10f.ctex"]
 
 [params]
 

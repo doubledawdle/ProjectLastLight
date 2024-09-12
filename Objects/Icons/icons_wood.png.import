@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://ptwdtr4tb0c4"
-path="res://.godot/imported/icons_sparkplug.png-e23595ef4d1ed55a15ee44d8edd4e1a3.ctex"
+uid="uid://dm8to17u2nu17"
+path="res://.godot/imported/icons_wood.png-d078b240ddadf1b3eb99d8c02f3e4867.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Objects/icons_sparkplug.png"
-dest_files=["res://.godot/imported/icons_sparkplug.png-e23595ef4d1ed55a15ee44d8edd4e1a3.ctex"]
+source_file="res://Objects/Icons/icons_wood.png"
+dest_files=["res://.godot/imported/icons_wood.png-d078b240ddadf1b3eb99d8c02f3e4867.ctex"]
 
 [params]
 

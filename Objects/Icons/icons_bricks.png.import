@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://b4mrk6hmyd3gn"
-path="res://.godot/imported/icons_nails.png-77156fb567cb160abf61b92696f5d7fe.ctex"
+uid="uid://deeva5xbxc4hn"
+path="res://.godot/imported/icons_bricks.png-92eb62d8eca2ba9b393ec76f8a70f77f.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Objects/icons_nails.png"
-dest_files=["res://.godot/imported/icons_nails.png-77156fb567cb160abf61b92696f5d7fe.ctex"]
+source_file="res://Objects/Icons/icons_bricks.png"
+dest_files=["res://.godot/imported/icons_bricks.png-92eb62d8eca2ba9b393ec76f8a70f77f.ctex"]
 
 [params]
 

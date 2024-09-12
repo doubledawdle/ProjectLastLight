@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://b7uyav2jdqfh1"
-path="res://.godot/imported/ScrapyardIcon.png-e075080e2588bb47791665376ba2552f.ctex"
+uid="uid://udbefcf5iiat"
+path="res://.godot/imported/icons_recoil.jpg-97135872b6fe0a58b18a8e6ff344a09c.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Objects/Map_Icons/ScrapyardIcon.png"
-dest_files=["res://.godot/imported/ScrapyardIcon.png-e075080e2588bb47791665376ba2552f.ctex"]
+source_file="res://Objects/Icons/icons_recoil.jpg"
+dest_files=["res://.godot/imported/icons_recoil.jpg-97135872b6fe0a58b18a8e6ff344a09c.ctex"]
 
 [params]
 

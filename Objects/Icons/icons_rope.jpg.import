@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bgq12mpuofgd6"
-path="res://.godot/imported/icons_metal.png-1d864deabf06ab83ae076018b7c20bb9.ctex"
+uid="uid://c04dbprt0soge"
+path="res://.godot/imported/icons_rope.jpg-4d31871581e131e3571084fa8afeb4bc.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Objects/icons_metal.png"
-dest_files=["res://.godot/imported/icons_metal.png-1d864deabf06ab83ae076018b7c20bb9.ctex"]
+source_file="res://Objects/Icons/icons_rope.jpg"
+dest_files=["res://.godot/imported/icons_rope.jpg-4d31871581e131e3571084fa8afeb4bc.ctex"]
 
 [params]
 

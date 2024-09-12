@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://deeva5xbxc4hn"
-path="res://.godot/imported/icons_bricks.png-7b979fe94cceebf6a858a396b783a690.ctex"
+uid="uid://dsvtex2vjhr4l"
+path="res://.godot/imported/icons_recoil.png-24bb04126b3e49d9b0876ed53bf92d71.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Objects/icons_bricks.png"
-dest_files=["res://.godot/imported/icons_bricks.png-7b979fe94cceebf6a858a396b783a690.ctex"]
+source_file="res://Objects/Icons/icons_recoil.png"
+dest_files=["res://.godot/imported/icons_recoil.png-24bb04126b3e49d9b0876ed53bf92d71.ctex"]
 
 [params]
 

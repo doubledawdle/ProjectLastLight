@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://31mk5xvc7m4p"
-path="res://.godot/imported/icons_wood.jpg-54a9de05882cd5aae84e889a3295f18c.ctex"
+uid="uid://brvo674cohjd2"
+path="res://.godot/imported/icons_nails.jpg-bd87716e9678f7fcd9c00580b1fdb295.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Objects/icons_wood.jpg"
-dest_files=["res://.godot/imported/icons_wood.jpg-54a9de05882cd5aae84e889a3295f18c.ctex"]
+source_file="res://Objects/Icons/icons_nails.jpg"
+dest_files=["res://.godot/imported/icons_nails.jpg-bd87716e9678f7fcd9c00580b1fdb295.ctex"]
 
 [params]
 

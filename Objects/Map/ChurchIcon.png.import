@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://udbefcf5iiat"
-path="res://.godot/imported/icons_recoil.jpg-2232a98b39753eb5a6cfd15a726e83ca.ctex"
+uid="uid://b7ald0cuob8pq"
+path="res://.godot/imported/ChurchIcon.png-e4324a3746ffb12ae2dd9264ee856c43.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Objects/icons_recoil.jpg"
-dest_files=["res://.godot/imported/icons_recoil.jpg-2232a98b39753eb5a6cfd15a726e83ca.ctex"]
+source_file="res://Objects/Map/ChurchIcon.png"
+dest_files=["res://.godot/imported/ChurchIcon.png-e4324a3746ffb12ae2dd9264ee856c43.ctex"]
 
 [params]
 
