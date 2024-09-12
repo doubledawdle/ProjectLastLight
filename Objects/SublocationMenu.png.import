@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://e4pwqo6l1co0"
-path="res://.godot/imported/ChurchIcon.png-191541169cf76e21792e594ac1901db7.ctex"
+uid="uid://cg36qjs84adxa"
+path="res://.godot/imported/SublocationMenu.png-573297e42a744979c37f4ef53509a688.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Objects/ChurchIcon.png"
-dest_files=["res://.godot/imported/ChurchIcon.png-191541169cf76e21792e594ac1901db7.ctex"]
+source_file="res://Objects/SublocationMenu.png"
+dest_files=["res://.godot/imported/SublocationMenu.png-573297e42a744979c37f4ef53509a688.ctex"]
 
 [params]
 
