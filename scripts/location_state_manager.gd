@@ -52,3 +52,7 @@ func enter_pause_state() -> void:
 
 func get_current_state() -> States:
 	return current_state
+	
+func start_resource_timer(time: int):
+	pass
+	
