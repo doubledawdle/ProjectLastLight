@@ -1,6 +1,6 @@
 extends Node
 
-enum ResourceType { SCRAP_WOOD, WOOD, SCRAP_METAL, METAL, NAILS, ROPE, BRICKS, FUEL}
+enum ResourceType { SCRAP_WOOD, WOOD, SCRAP_METAL, METAL, NAILS, ROPE, BRICKS, FUEL, PLAYER, VILLAGERS}
 
 enum WinningResource {SPARK_PLUG, PULL_STRING, PROPELLER }
 
@@ -24,7 +24,21 @@ func get_resource_name(resource_type):
 			return "Bricks"
 		ResourceType.FUEL:
 			return "Fuel"
+		ResourceType.PLAYER:
+			return "Player"
+		ResourceType.VILLAGERS:
+			return "Villagers"
 	
+func get_resource_type(resource_name):
+	match resource_name:
+		"Wood":
+			return ResourceType.WOOD
+		"Metal":
+			return ResourceType.METAL
+		"Nails":
+			return ResourceType.NAILS
+		"Fuel": 
+			return ResourceType.FUEL
 
 func get_winning_resource_name(winning_type):
 	match winning_type:
@@ -45,6 +59,8 @@ var resources = {
 	ResourceType.ROPE: 0,
 	ResourceType.BRICKS: 0,
 	ResourceType.FUEL: 0,
+	ResourceType.PLAYER: 1,
+	ResourceType.VILLAGERS: 3,
 }
 
 var winning_resources = {

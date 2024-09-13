@@ -1,6 +1,6 @@
 [gd_scene load_steps=7 format=3 uid="uid://dbeuw38iexnj7"]
 
-[ext_resource type="Script" path="res://scenes/map/sublocations_menu.gd" id="1_8ivc8"]
+[ext_resource type="Script" path="res://scripts/sublocations_menu.gd" id="1_8ivc8"]
 [ext_resource type="Texture2D" uid="uid://cg36qjs84adxa" path="res://Objects/Map/SublocationMenu.png" id="1_k46i0"]
 [ext_resource type="Texture2D" uid="uid://d2csslr53lxxr" path="res://Objects/Map/Profile.png" id="2_0vadw"]
 [ext_resource type="Texture2D" uid="uid://cff05swlubitl" path="res://Objects/Map/sublocation.png" id="3_2d8pb"]
@@ -31,28 +31,31 @@ position = Vector2(662, 348)
 texture = ExtResource("1_k46i0")
 
 [node name="Profile" type="Sprite2D" parent="Panel/SublocationMenu"]
-position = Vector2(-510, -203)
+position = Vector2(-489, -4)
 texture = ExtResource("2_0vadw")
 
 [node name="Profile2" type="Sprite2D" parent="Panel/SublocationMenu"]
+visible = false
 position = Vector2(-502, 0)
 texture = ExtResource("2_0vadw")
 
 [node name="Profile3" type="Sprite2D" parent="Panel/SublocationMenu"]
+visible = false
 position = Vector2(-506, 200)
 texture = ExtResource("2_0vadw")
 
 [node name="sublocation1" type="TextureButton" parent="Panel"]
 layout_mode = 0
-offset_left = -232.0
-offset_top = -369.0
-offset_right = 1688.0
-offset_bottom = 711.0
+offset_left = -235.0
+offset_top = -171.0
+offset_right = 1685.0
+offset_bottom = 909.0
 action_mode = 0
 texture_normal = ExtResource("3_2d8pb")
 stretch_mode = 3
 
 [node name="Title" type="Label" parent="Panel/sublocation1"]
+visible = false
 layout_mode = 1
 anchors_preset = -1
 anchor_right = 0.063
@@ -67,8 +70,10 @@ horizontal_alignment = 1
 [node name="ResourceRange" type="Label" parent="Panel/sublocation1"]
 layout_mode = 1
 anchors_preset = -1
-anchor_right = 0.063
-anchor_bottom = 0.086
+anchor_left = 0.0015625
+anchor_top = -0.0314815
+anchor_right = 0.0645625
+anchor_bottom = 0.0545185
 offset_left = 583.0
 offset_top = 465.0
 offset_right = 1324.04
@@ -78,6 +83,7 @@ horizontal_alignment = 1
 metadata/_edit_use_anchors_ = true
 
 [node name="sublocation2" type="TextureButton" parent="Panel"]
+visible = false
 layout_mode = 0
 offset_left = -231.0
 offset_top = -170.0
@@ -110,6 +116,7 @@ label_settings = SubResource("LabelSettings_2jopv")
 horizontal_alignment = 1
 
 [node name="sublocation3" type="TextureButton" parent="Panel"]
+visible = false
 layout_mode = 0
 offset_left = -225.0
 offset_top = 26.0
@@ -142,10 +149,10 @@ label_settings = SubResource("LabelSettings_2jopv")
 horizontal_alignment = 1
 
 [node name="Close" type="Button" parent="."]
-offset_left = 862.0
-offset_top = 864.0
-offset_right = 1176.0
-offset_bottom = 962.0
+offset_left = 911.0
+offset_top = 677.0
+offset_right = 1225.0
+offset_bottom = 775.0
 text = "CLOSE
 "
 
