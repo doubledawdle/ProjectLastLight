@@ -17,14 +17,14 @@ func _process(delta):
 
 func setup(sublocationsArr: Array):
 	arr = sublocationsArr
-	$Panel/SublocationMenu/sublocation1/Title.text = sublocationsArr[0].title
-	$Panel/SublocationMenu/sublocation1/ResourceRange.text = str(sublocationsArr[0].range.x) + " - " + str(sublocationsArr[0].range.y) + " " + sublocationsArr[0].resource
+	$Panel/sublocation1/Title.text = sublocationsArr[0].title
+	$Panel/sublocation1/ResourceRange.text = str(sublocationsArr[0].range.x) + " - " + str(sublocationsArr[0].range.y) + " " + sublocationsArr[0].resource
 	
-	$Panel/SublocationMenu/sublocation2/Title.text = sublocationsArr[1].title
-	$Panel/SublocationMenu/sublocation2/ResourceRange.text = str(sublocationsArr[1].range.x) + " - " + str(sublocationsArr[1].range.y) + " " + sublocationsArr[1].resource
+	$Panel/sublocation2/Title.text = sublocationsArr[1].title
+	$Panel/sublocation2/ResourceRange.text = str(sublocationsArr[1].range.x) + " - " + str(sublocationsArr[1].range.y) + " " + sublocationsArr[1].resource
 	
-	$Panel/SublocationMenu/sublocation3/Title.text = sublocationsArr[2].title
-	$Panel/SublocationMenu/sublocation3/ResourceRange.text = str(sublocationsArr[2].range.x) + " - " + str(sublocationsArr[2].range.y) + " " + sublocationsArr[2].resource
+	$Panel/sublocation3/Title.text = sublocationsArr[2].title
+	$Panel/sublocation3/ResourceRange.text = str(sublocationsArr[2].range.x) + " - " + str(sublocationsArr[2].range.y) + " " + sublocationsArr[2].resource
 
 
 func _on_close_pressed():
