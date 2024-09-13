@@ -1,18 +1,18 @@
 extends Sprite2D
 
 # Variables to set for sublocation menu
-@export var sublocation1_title: String
-@export var sublocation2_title: String
-@export var sublocation3_title: String
+#@export var sublocation1_title: String
+#@export var sublocation2_title: String
+#@export var sublocation3_title: String
 @export var sublocation1_resource: ResourceInventory.ResourceType
-@export var sublocation2_resource: ResourceInventory.ResourceType
-@export var sublocation3_resource: ResourceInventory.ResourceType
+#@export var sublocation2_resource: ResourceInventory.ResourceType
+#@export var sublocation3_resource: ResourceInventory.ResourceType
 @export var sublocation1_range: Vector2
-@export var sublocation2_range: Vector2
-@export var sublocation3_range: Vector2
+#@export var sublocation2_range: Vector2
+#@export var sublocation3_range: Vector2
 @export var sublocation1_time: int
-@export var sublocation2_time: int
-@export var sublocation3_time: int
+#@export var sublocation2_time: int
+#@export var sublocation3_time: int
 
 var sublocationsArr : Array 
 
@@ -29,9 +29,9 @@ var tween : Tween
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	sublocationsArr = [
-		{"title": sublocation1_title, "resource": ResourceInventory.get_resource_name(sublocation1_resource), "range": sublocation1_range, "time": sublocation1_time},
-		{"title": sublocation2_title, "resource": ResourceInventory.get_resource_name(sublocation2_resource), "range": sublocation2_range, "time": sublocation2_time},
-		{"title": sublocation3_title, "resource": ResourceInventory.get_resource_name(sublocation3_resource), "range": sublocation3_range, "time": sublocation3_time}
+		{"resource": ResourceInventory.get_resource_name(sublocation1_resource), "range": sublocation1_range, "time": sublocation1_time},
+		#{"title": sublocation2_title, "resource": ResourceInventory.get_resource_name(sublocation2_resource), "range": sublocation2_range, "time": sublocation2_time},
+		#{"title": sublocation3_title, "resource": ResourceInventory.get_resource_name(sublocation3_resource), "range": sublocation3_range, "time": sublocation3_time}
 	]
 
 

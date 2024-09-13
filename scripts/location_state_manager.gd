@@ -3,56 +3,51 @@ extends Node
 
 class_name LocationState
 
-enum States {
-	BEGINNING,
-	PLAYING,
-	SCAVENGING,
-	BUILDING,
-	PAUSED
-}
+var timer: Timer = null # ref for the timer 
+var resource_info = {}
 
-var current_state
+signal resource_added(resource_name: String, amount: int)
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	# SET TO BEGINNING WHEN MAIN MENU EXISTS
-	current_state = States.PLAYING
+	pass
 
 
 func _process(delta: float) -> void:
-	#print(current_state)
-	# TODO: probably shouldn't have input detected outside player
-	if current_state != States.BEGINNING:
-		if Input.is_action_just_pressed("ui_cancel") && current_state != States.PAUSED:
-			enter_pause_state()
-		elif Input.is_action_just_pressed("ui_cancel"):
-			enter_playing_state()
-
-func enter_beginning_state() -> void:
-	current_state = States.BEGINNING
-
-
-func enter_playing_state() -> void:
-	current_state = States.PLAYING
-	get_tree().paused = false
-
-
-func enter_building_state() -> void:
-	current_state = States.BUILDING
-
-
-func enter_scavenging_state() -> void:
-	current_state = States.SCAVENGING
-
-
-func enter_pause_state() -> void:
-	current_state = States.PAUSED
-	get_tree().paused = true
-
-
-func get_current_state() -> States:
-	return current_state
-	
-func start_resource_timer(time: int):
 	pass
+
+
+	
+func update_player_resource(resource_type: String, rangeX: float, rangeY:float, time: int) -> void: 
+	var random_amount = randi_range(rangeX, rangeY)
+	#var resource_type = ResourceInventory.ResourceType.SCRAP_WOOD
+	resource_info = {
+		"random_amount": random_amount,
+		"resource": ResourceInventory.get_resource_type(resource_type),
+		"resource_name":resource_type
+	}
+	
+	timer = Timer.new()
+	timer.wait_time = time
+	timer.one_shot = true
+	timer.connect("timeout", Callable(self, "_on_timer_timeout"))
+	get_tree().root.add_child(timer)  # Add the timer to the root so it persists after menu close
+	timer.start()
+	print("Timer started for resource gathering.")
+	#ResourceInventory.add_resource(ResourceInventory.ResourceType.SCRAP_WOOD, random_amount)
+	#print("Added ", random_amount, " ", arr[0].resource, " to inventory")
+	
+# This function will be called when the timer finishes
+func _on_timer_timeout() -> void:
+	# Extract the data from the resource info dictionary
+	var random_amount = resource_info["random_amount"]
+	var resource = resource_info["resource"]
+	var resource_name = resource_info["resource_name"]
+	print("Timer finished! Adding ", random_amount, " ", resource, " to inventory.")
+	
+	# Add the resource to the inventory
+	ResourceInventory.add_resource(resource, random_amount)
+	emit_signal("resource_added", resource_name, random_amount)
+	#$Panel/SublocationMenu/TimerLabel.text = "Resource gathered!"d!"
+
 	

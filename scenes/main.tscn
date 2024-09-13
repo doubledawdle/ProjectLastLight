@@ -1,19 +1,21 @@
-[gd_scene load_steps=9 format=3 uid="uid://cy8oxmco1gp61"]
+[gd_scene load_steps=10 format=3 uid="uid://cy8oxmco1gp61"]
 
 [ext_resource type="PackedScene" uid="uid://pepc34cmcxho" path="res://scenes/game_state_manager.tscn" id="1_4ewyr"]
 [ext_resource type="PackedScene" uid="uid://diwqd6tutq3r4" path="res://scenes/player.tscn" id="1_rnt2r"]
-[ext_resource type="PackedScene" uid="uid://3qp20k2n5q3" path="res://scenes/location_state_manager.tscn" id="2_8lu58"]
-[ext_resource type="PackedScene" uid="uid://27ahtx5ktldo" path="res://scenes/map.tscn" id="2_kb4ue"]
+[ext_resource type="Script" path="res://scenes/main.gd" id="1_ug3ks"]
+[ext_resource type="PackedScene" uid="uid://27ahtx5ktldo" path="res://scenes/map/map.tscn" id="2_kb4ue"]
 [ext_resource type="PackedScene" uid="uid://e7562cjsv7yq" path="res://scenes/main_ui.tscn" id="3_anoo3"]
 [ext_resource type="Texture2D" uid="uid://b6p8ffbid1uqf" path="res://Objects/foreground.png" id="4_bb0la"]
 [ext_resource type="PackedScene" uid="uid://c5kgcri1r6c3u" path="res://scenes/chest.tscn" id="4_fr8jv"]
 [ext_resource type="PackedScene" uid="uid://dd2f3g5ip044w" path="res://scenes/inventory/inventory_menu.tscn" id="8_rskjx"]
 
+[sub_resource type="LabelSettings" id="LabelSettings_xv8yf"]
+font_size = 40
+
 [node name="Node2D" type="Node2D"]
+script = ExtResource("1_ug3ks")
 
 [node name="GameStateManager" parent="." instance=ExtResource("1_4ewyr")]
-
-[node name="LocationStateManager" parent="." instance=ExtResource("2_8lu58")]
 
 [node name="Player" parent="." instance=ExtResource("1_rnt2r")]
 position = Vector2(960, 540)
@@ -34,3 +36,10 @@ offset_left = -5.0
 offset_top = -31.5
 offset_right = -5.0
 offset_bottom = -31.5
+
+[node name="NotificationLabel" type="Label" parent="."]
+offset_left = 1263.0
+offset_top = 23.0
+offset_right = 1499.0
+offset_bottom = 78.0
+label_settings = SubResource("LabelSettings_xv8yf")

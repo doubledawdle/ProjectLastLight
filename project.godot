@@ -18,6 +18,8 @@ config/icon="res://Objects/icon.svg"
 [autoload]
 
 ResourceInventory="*res://scripts/resource_inventory.gd"
+LocationStateManager="*res://scripts/location_state_manager.gd"
+GameStateManager="*res://scripts/game_state_manager.gd"
 
 [display]
 

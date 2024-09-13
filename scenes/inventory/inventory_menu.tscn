@@ -1,13 +1,10 @@
-[gd_scene load_steps=9 format=3 uid="uid://dd2f3g5ip044w"]
+[gd_scene load_steps=6 format=3 uid="uid://dd2f3g5ip044w"]
 
 [ext_resource type="PackedScene" uid="uid://55tcet650r4i" path="res://scenes/inventory/inventory_icon.tscn" id="1_aoc0c"]
 [ext_resource type="Texture2D" uid="uid://dm8to17u2nu17" path="res://Objects/Icons/icons_wood.png" id="2_0sn6x"]
-[ext_resource type="Texture2D" uid="uid://dvpk8ibl5nay3" path="res://Objects/Icons/icons_wooden_posts.png" id="3_p1i7w"]
-[ext_resource type="Texture2D" uid="uid://bgq12mpuofgd6" path="res://Objects/Icons/icons_metal.png" id="4_i5m2p"]
+[ext_resource type="Texture2D" uid="uid://dmcjmb0wnim8w" path="res://Objects/Icons/icons_fuel.png" id="5_boaxv"]
 [ext_resource type="Texture2D" uid="uid://bonmg1ygt0xl0" path="res://Objects/Icons/icons_metal_2.png" id="5_mmbof"]
 [ext_resource type="Texture2D" uid="uid://b4mrk6hmyd3gn" path="res://Objects/Icons/icons_nails.png" id="6_dtufr"]
-[ext_resource type="Texture2D" uid="uid://f4qn4pw430b4" path="res://Objects/Icons/icons_rope.png" id="7_1xsa2"]
-[ext_resource type="Texture2D" uid="uid://deeva5xbxc4hn" path="res://Objects/Icons/icons_bricks.png" id="8_dndx8"]
 
 [node name="InventoryMenu" type="Control"]
 layout_mode = 3
@@ -23,38 +20,24 @@ layout_mode = 0
 offset_left = 1787.0
 offset_top = 81.0
 offset_right = 1906.0
-offset_bottom = 1021.0
+offset_bottom = 718.0
 
 [node name="ScrapWood" parent="Panel" instance=ExtResource("1_aoc0c")]
 position = Vector2(63, 53)
 texture = ExtResource("2_0sn6x")
-
-[node name="InventoryIcon" parent="Panel" instance=ExtResource("1_aoc0c")]
-position = Vector2(61, 185)
-texture = ExtResource("3_p1i7w")
 resource_type = 1
 
-[node name="ScrapMetal" parent="Panel" instance=ExtResource("1_aoc0c")]
-position = Vector2(57, 343)
-texture = ExtResource("4_i5m2p")
-resource_type = 2
-
 [node name="Metal" parent="Panel" instance=ExtResource("1_aoc0c")]
-position = Vector2(61, 470)
+position = Vector2(62, 207)
 texture = ExtResource("5_mmbof")
 resource_type = 3
 
 [node name="Nails" parent="Panel" instance=ExtResource("1_aoc0c")]
-position = Vector2(61, 576)
+position = Vector2(61, 382)
 texture = ExtResource("6_dtufr")
 resource_type = 4
 
-[node name="Rope" parent="Panel" instance=ExtResource("1_aoc0c")]
-position = Vector2(61, 714)
-texture = ExtResource("7_1xsa2")
-resource_type = 5
-
-[node name="Bricks" parent="Panel" instance=ExtResource("1_aoc0c")]
-position = Vector2(57, 867)
-texture = ExtResource("8_dndx8")
-resource_type = 6
+[node name="InventoryIcon" parent="Panel" instance=ExtResource("1_aoc0c")]
+position = Vector2(59, 541)
+texture = ExtResource("5_boaxv")
+resource_type = 7
