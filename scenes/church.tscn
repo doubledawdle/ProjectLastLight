@@ -1,6 +1,6 @@
 [gd_scene load_steps=4 format=3 uid="uid://bt85ox36t6ehg"]
 
-[ext_resource type="Texture2D" uid="uid://b7ald0cuob8pq" path="res://Objects/Map_Icons/ChurchIcon.png" id="1_m8qg8"]
+[ext_resource type="Texture2D" uid="uid://b7ald0cuob8pq" path="res://Objects/Map/ChurchIcon.png" id="1_m8qg8"]
 [ext_resource type="Script" path="res://scripts/location.gd" id="2_oowpm"]
 [ext_resource type="PackedScene" uid="uid://dx2lr2powi77b" path="res://scenes/interactable.tscn" id="3_8epvj"]
 
