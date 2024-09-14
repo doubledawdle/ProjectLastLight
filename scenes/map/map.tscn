@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=3 uid="uid://27ahtx5ktldo"]
+[gd_scene load_steps=12 format=3 uid="uid://27ahtx5ktldo"]
 
 [ext_resource type="Texture2D" uid="uid://2t34bfi6qgw4" path="res://Objects/map.png" id="1_5doex"]
 [ext_resource type="Texture2D" uid="uid://qkvasdvu27hb" path="res://Objects/Map/foresticon.png" id="5_7eh70"]
@@ -9,6 +9,8 @@
 [ext_resource type="Texture2D" uid="uid://b8go8l8qil1vi" path="res://Objects/Map/title.png" id="7_vebsc"]
 [ext_resource type="AudioStream" uid="uid://cgjcghigkvnn1" path="res://Audio/SNEAKY-MYSTERIOUS-SUSPENSE-(HOCUS-POCUS)_AdobeStock_930758307.wav" id="8_wmbl8"]
 [ext_resource type="Script" path="res://scripts/audio_stream_player_2d.gd" id="9_uqi8i"]
+[ext_resource type="Texture2D" uid="uid://ccsxi00b8i7s2" path="res://Objects/Map/LumberyardIcon (1).png" id="10_ea5lw"]
+[ext_resource type="Texture2D" uid="uid://dfs864usvm1bl" path="res://Objects/Map/Gasstation Icon.png" id="11_7n4be"]
 
 [node name="Map" type="Node2D"]
 
@@ -61,3 +63,17 @@ stream = ExtResource("8_wmbl8")
 volume_db = -29.714
 autoplay = true
 script = ExtResource("9_uqi8i")
+
+[node name="LumberYard" parent="." instance=ExtResource("5_067y8")]
+position = Vector2(1655, 663)
+texture = ExtResource("10_ea5lw")
+sublocation1_resource = 1
+sublocation1_range = Vector2(2, 6)
+sublocation1_time = 60
+
+[node name="GasStation" parent="." instance=ExtResource("5_067y8")]
+position = Vector2(1660, 254)
+texture = ExtResource("11_7n4be")
+sublocation1_resource = 7
+sublocation1_range = Vector2(1, 4)
+sublocation1_time = 40

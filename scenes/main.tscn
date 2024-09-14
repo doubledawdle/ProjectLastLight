@@ -2,11 +2,11 @@
 
 [ext_resource type="PackedScene" uid="uid://pepc34cmcxho" path="res://scenes/game_state_manager.tscn" id="1_4ewyr"]
 [ext_resource type="PackedScene" uid="uid://diwqd6tutq3r4" path="res://scenes/player.tscn" id="1_rnt2r"]
-[ext_resource type="Script" path="res://scenes/main.gd" id="1_ug3ks"]
+[ext_resource type="Script" path="res://scripts/main.gd" id="1_ug3ks"]
 [ext_resource type="PackedScene" uid="uid://27ahtx5ktldo" path="res://scenes/map/map.tscn" id="2_kb4ue"]
 [ext_resource type="PackedScene" uid="uid://e7562cjsv7yq" path="res://scenes/main_ui.tscn" id="3_anoo3"]
-[ext_resource type="Texture2D" uid="uid://b6p8ffbid1uqf" path="res://Objects/foreground.png" id="4_bb0la"]
 [ext_resource type="PackedScene" uid="uid://c5kgcri1r6c3u" path="res://scenes/chest.tscn" id="4_fr8jv"]
+[ext_resource type="Texture2D" uid="uid://cseirranyym6r" path="res://Objects/foreground (1).png" id="7_mxr5r"]
 [ext_resource type="PackedScene" uid="uid://dd2f3g5ip044w" path="res://scenes/inventory/inventory_menu.tscn" id="8_rskjx"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_xv8yf"]
@@ -29,7 +29,7 @@ scale = Vector2(2, 2)
 
 [node name="Foreground" type="Sprite2D" parent="."]
 position = Vector2(960, 540)
-texture = ExtResource("4_bb0la")
+texture = ExtResource("7_mxr5r")
 
 [node name="InventoryMenu" parent="." instance=ExtResource("8_rskjx")]
 offset_left = -5.0
@@ -42,4 +42,11 @@ offset_left = 1263.0
 offset_top = 23.0
 offset_right = 1499.0
 offset_bottom = 78.0
+label_settings = SubResource("LabelSettings_xv8yf")
+
+[node name="Timer" type="Label" parent="."]
+offset_left = 756.0
+offset_top = 22.0
+offset_right = 992.0
+offset_bottom = 77.0
 label_settings = SubResource("LabelSettings_xv8yf")

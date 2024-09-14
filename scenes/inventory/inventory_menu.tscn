@@ -1,10 +1,11 @@
-[gd_scene load_steps=6 format=3 uid="uid://dd2f3g5ip044w"]
+[gd_scene load_steps=7 format=3 uid="uid://dd2f3g5ip044w"]
 
 [ext_resource type="PackedScene" uid="uid://55tcet650r4i" path="res://scenes/inventory/inventory_icon.tscn" id="1_aoc0c"]
 [ext_resource type="Texture2D" uid="uid://dm8to17u2nu17" path="res://Objects/Icons/icons_wood.png" id="2_0sn6x"]
 [ext_resource type="Texture2D" uid="uid://dmcjmb0wnim8w" path="res://Objects/Icons/icons_fuel.png" id="5_boaxv"]
 [ext_resource type="Texture2D" uid="uid://bonmg1ygt0xl0" path="res://Objects/Icons/icons_metal_2.png" id="5_mmbof"]
 [ext_resource type="Texture2D" uid="uid://b4mrk6hmyd3gn" path="res://Objects/Icons/icons_nails.png" id="6_dtufr"]
+[ext_resource type="Texture2D" uid="uid://c36am2tads7fc" path="res://Objects/Icons/villager.png" id="6_qkuad"]
 
 [node name="InventoryMenu" type="Control"]
 layout_mode = 3
@@ -20,7 +21,7 @@ layout_mode = 0
 offset_left = 1787.0
 offset_top = 81.0
 offset_right = 1906.0
-offset_bottom = 718.0
+offset_bottom = 893.0
 
 [node name="ScrapWood" parent="Panel" instance=ExtResource("1_aoc0c")]
 position = Vector2(63, 53)
@@ -41,3 +42,8 @@ resource_type = 4
 position = Vector2(59, 541)
 texture = ExtResource("5_boaxv")
 resource_type = 7
+
+[node name="InventoryIcon2" parent="Panel" instance=ExtResource("1_aoc0c")]
+position = Vector2(76, 703)
+texture = ExtResource("6_qkuad")
+resource_type = 9
