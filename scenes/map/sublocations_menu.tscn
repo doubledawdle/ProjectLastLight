@@ -1,9 +1,14 @@
-[gd_scene load_steps=7 format=3 uid="uid://dbeuw38iexnj7"]
+[gd_scene load_steps=9 format=3 uid="uid://dbeuw38iexnj7"]
 
 [ext_resource type="Script" path="res://scripts/sublocations_menu.gd" id="1_8ivc8"]
 [ext_resource type="Texture2D" uid="uid://cg36qjs84adxa" path="res://Objects/Map/SublocationMenu.png" id="1_k46i0"]
 [ext_resource type="Texture2D" uid="uid://d2csslr53lxxr" path="res://Objects/Map/Profile.png" id="2_0vadw"]
 [ext_resource type="Texture2D" uid="uid://cff05swlubitl" path="res://Objects/Map/sublocation.png" id="3_2d8pb"]
+[ext_resource type="Texture2D" uid="uid://0yofvmoa6vi6" path="res://Objects/Map/sublocationhover.png" id="5_it8af"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_vxlas"]
+font_size = 28
+font_color = Color(0, 0, 0, 1)
 
 [sub_resource type="LabelSettings" id="LabelSettings_rgw27"]
 font_size = 40
@@ -34,6 +39,9 @@ texture = ExtResource("1_k46i0")
 position = Vector2(-489, -4)
 texture = ExtResource("2_0vadw")
 
+[node name="villager" type="Sprite2D" parent="Panel/SublocationMenu/Profile"]
+position = Vector2(-11, -43)
+
 [node name="Profile2" type="Sprite2D" parent="Panel/SublocationMenu"]
 visible = false
 position = Vector2(-502, 0)
@@ -44,26 +52,32 @@ visible = false
 position = Vector2(-506, 200)
 texture = ExtResource("2_0vadw")
 
+[node name="notification" type="Label" parent="Panel/SublocationMenu"]
+offset_left = -245.0
+offset_top = -303.0
+offset_right = 390.0
+offset_bottom = -224.0
+label_settings = SubResource("LabelSettings_vxlas")
+
 [node name="sublocation1" type="TextureButton" parent="Panel"]
-layout_mode = 0
 offset_left = -235.0
 offset_top = -171.0
 offset_right = 1685.0
 offset_bottom = 909.0
 action_mode = 0
 texture_normal = ExtResource("3_2d8pb")
+texture_pressed = ExtResource("5_it8af")
 stretch_mode = 3
 
 [node name="Title" type="Label" parent="Panel/sublocation1"]
-visible = false
 layout_mode = 1
 anchors_preset = -1
 anchor_right = 0.063
 anchor_bottom = 0.086
 offset_left = 585.0
-offset_top = 399.0
+offset_top = 468.0
 offset_right = 1323.04
-offset_bottom = 369.12
+offset_bottom = 438.12
 label_settings = SubResource("LabelSettings_rgw27")
 horizontal_alignment = 1
 
@@ -71,9 +85,9 @@ horizontal_alignment = 1
 layout_mode = 1
 anchors_preset = -1
 anchor_left = 0.0015625
-anchor_top = -0.0314815
+anchor_top = -0.062037
 anchor_right = 0.0645625
-anchor_bottom = 0.0545185
+anchor_bottom = 0.023963
 offset_left = 583.0
 offset_top = 465.0
 offset_right = 1324.04

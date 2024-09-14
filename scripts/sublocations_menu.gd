@@ -19,6 +19,7 @@ func setup(sublocationsArr: Array):
 	arr = sublocationsArr
 	#$Panel/sublocation1/Title.text = sublocationsArr[0].title
 	$Panel/sublocation1/ResourceRange.text = str(sublocationsArr[0].range.x) + " - " + str(sublocationsArr[0].range.y) + " " + sublocationsArr[0].resource
+	$Panel/sublocation1/Title.text = str(sublocationsArr[0].time) + " seconds"
 	
 	#$Panel/sublocation2/Title.text = sublocationsArr[1].title
 	#$Panel/sublocation2/ResourceRange.text = str(sublocationsArr[1].range.x) + " - " + str(sublocationsArr[1].range.y) + " " + sublocationsArr[1].resource
@@ -35,7 +36,15 @@ func _on_sublocation_1_pressed():
 	# need to add a resource to inventory for player and villagers. Will check if 
 	# player and villager is = to 0 before running the logic.
 	# in the timeout function set the player back to 1 and add one back to the villagers 
-	LocationStateManager.update_player_resource(arr[0].resource, arr[0].range.x, arr[0].range.y, arr[0].time)
+	if (ResourceInventory.get_resource_amount(ResourceInventory.ResourceType.VILLAGERS) == 0):
+		$Panel/SublocationMenu/notification.visible = true
+		$Panel/SublocationMenu/notification.text = "All your villagers are busy!"
+	else: 
+		ResourceInventory.remove_resource(ResourceInventory.ResourceType.VILLAGERS, 1)
+		$Panel/SublocationMenu/notification.visible = false
+		LocationStateManager.update_player_resource(arr[0].resource, arr[0].range.x, arr[0].range.y, arr[0].time)
+		$Panel/SublocationMenu/Profile/villager.texture = load("res://Objects/Icons/villager.png")
+
 	#print("I've Been Pressed!")
 	#var random_amount = randi_range(arr[0].range.x, arr[0].range.y)
 	#var resource_type = ResourceInventory.ResourceType.SCRAP_WOOD

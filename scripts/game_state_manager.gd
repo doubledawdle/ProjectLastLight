@@ -3,6 +3,8 @@ extends Node
 
 class_name GameState
 
+signal update_timer(time_left: float)
+
 enum States {
 	BEGINNING,
 	PLAYING,
@@ -11,12 +13,41 @@ enum States {
 	PAUSED
 }
 
+enum DayCycle {
+	DAY,
+	EVENING,
+	NIGHT,
+}
+
 var current_state
+var current_cycle: DayCycle = DayCycle.DAY
+
+var day_duration: float = 180.0 # Duration of the day phase in seconds
+var evening_duration: float = 120.0 # Duration of the evening phase in seconds
+var night_duration: float = 180 # Duration of the night phase in seconds
+
+
+var day_timer: Timer 
+var remaining_time: float = 0.0
+
+var days_survived: int = 0
+
+func get_cycle_name(cycle) -> String:
+	match (cycle):
+		DayCycle.DAY: 
+			return "Day"
+		DayCycle.EVENING:
+			return "Evening"
+		DayCycle.NIGHT:
+			return "Night"
+		
+	return "Unknown Cycle"
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	# SET TO BEGINNING WHEN MAIN MENU EXISTS
 	current_state = States.PLAYING
+
 
 
 func _process(delta: float) -> void:
@@ -27,6 +58,62 @@ func _process(delta: float) -> void:
 			enter_pause_state()
 		elif Input.is_action_just_pressed("ui_cancel"):
 			enter_playing_state()
+			
+			
+	if remaining_time > 0:
+		remaining_time -= delta  # Subtract elapsed time from remaining time
+		emit_signal("update_timer", remaining_time)  # Emit the signal with remaining time
+	else:
+		emit_signal("update_timer", 0)  # Emit zero when time is up
+		
+			
+func start_day_cycle() -> void:
+	current_cycle = DayCycle.DAY
+	start_phase(day_duration, "_on_day_phase_complete")
+	print("day started")
+	
+# Starts the evening phase
+func start_evening_phase() -> void:
+	current_cycle = DayCycle.EVENING
+	start_phase(evening_duration, "_on_evening_phase_complete")
+	
+# Starts the night phase
+func start_night_phase() -> void:
+	current_cycle = DayCycle.NIGHT
+	start_phase(night_duration, "_on_night_phase_complete")
+	
+	
+func start_phase(duration: float, callback: String) -> void:
+	if day_timer:
+		day_timer.queue_free()
+		
+	day_timer = Timer.new()
+	day_timer.wait_time = duration
+	day_timer.one_shot = true
+	day_timer.connect("timeout", Callable(self, callback))
+	add_child(day_timer)
+	day_timer.start()
+	
+	remaining_time = duration
+	
+# Called when the day phase is complete
+func _on_day_phase_complete() -> void:
+	print("Day phase complete, transitioning to evening.")
+	start_evening_phase()
+
+# Called when the evening phase is complete
+func _on_evening_phase_complete() -> void:
+	print("Evening phase complete, transitioning to night.")
+	start_night_phase()
+
+# Called when the night phase is complete
+func _on_night_phase_complete() -> void:
+	print("Night phase complete, starting a new day cycle.")
+	days_survived += 1
+	start_day_cycle() # Restart the cycle
+	
+func get_current_cycle() -> DayCycle:
+	return current_cycle
 
 func enter_beginning_state() -> void:
 	current_state = States.BEGINNING
@@ -52,3 +139,7 @@ func enter_pause_state() -> void:
 
 func get_current_state() -> States:
 	return current_state
+	
+func start_day_timer() -> void:
+	day_timer = Timer.new()
+	
