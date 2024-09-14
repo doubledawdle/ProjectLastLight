@@ -9,6 +9,7 @@
 [ext_resource type="PackedScene" uid="uid://cyvg3qa4nk1s8" path="res://scenes/enemy.tscn" id="6_y8wtm"]
 [ext_resource type="Texture2D" uid="uid://cseirranyym6r" path="res://Objects/foreground (1).png" id="7_mxr5r"]
 [ext_resource type="PackedScene" uid="uid://dd2f3g5ip044w" path="res://scenes/inventory/inventory_menu.tscn" id="8_rskjx"]
+[ext_resource type="AudioStream" uid="uid://cr0em660c13cc" path="res://Audio/bloodlust-176915.wav" id="9_86egg"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_xv8yf"]
 font_size = 40
@@ -48,6 +49,10 @@ offset_right = 992.0
 offset_bottom = 77.0
 label_settings = SubResource("LabelSettings_xv8yf")
 
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("9_86egg")
+autoplay = true
+
 [node name="Enemy" parent="." instance=ExtResource("6_y8wtm")]
 position = Vector2(1083, 959)
 scale = Vector2(0.227903, 0.227903)
@@ -55,3 +60,6 @@ scale = Vector2(0.227903, 0.227903)
 [node name="Player" parent="." instance=ExtResource("1_rnt2r")]
 position = Vector2(960, 540)
 map_scene = ExtResource("2_kb4ue")
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("9_86egg")
+autoplay = true
