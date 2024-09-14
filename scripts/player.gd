@@ -13,6 +13,12 @@ var active_light = null
 
 var fuel_drain_rate: float = 1.0
 
+# should be in a take damage component. no time
+var enemyDetected := false
+@export var hitsBeforeDeath := 5
+var currentHitsTaken := 0
+var timeToKill := 100
+
 func _ready() -> void:
 	#screen_size = get_viewport_rect().size
 	if map_scene != null:
@@ -56,6 +62,13 @@ func _process(delta: float) -> void:
 	#if game_state_manager.current_state == 3:
 		#print("building")
 		
+	if enemyDetected:
+		currentHitsTaken += 1
+		#print(currentHitsTaken)
+		
+	if currentHitsTaken >= hitsBeforeDeath * timeToKill:
+		die()
+		
 func drain_fuel(delta: float) -> void:
 	var fuel = ResourceInventory.get_resource_amount(ResourceInventory.ResourceType.FUEL)
 	
@@ -78,3 +91,19 @@ func turn_off_light() -> void:
 		active_light.queue_free()
 		active_light = null
 		
+
+
+func _on_area_2d_area_entered(area: Area2D) -> void:
+	if area.is_in_group("Enemies"):
+		print("enemy entered", area)
+		enemyDetected = true
+
+
+func _on_area_2d_area_exited(area: Area2D) -> void:
+	if area.is_in_group("Enemies"):
+		print("enemy exited", area)
+		enemyDetected = false
+
+func die() -> void:
+	print("GAME OVER")
+	GameStateManager.enter_beginning_state()
