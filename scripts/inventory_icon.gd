@@ -19,6 +19,6 @@ func _update_label() -> void:
 	$Label.text = resource_name + " " + str(ResourceInventory.get_resource_amount(resource_type))
 	
 func _on_resource_changed(resource: ResourceInventory.ResourceType) -> void:
-	print("resource type", resource)
+	
 	if resource == self.resource_type:
 		_update_label()

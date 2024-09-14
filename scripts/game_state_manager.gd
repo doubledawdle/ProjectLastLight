@@ -6,6 +6,7 @@ class_name GameState
 signal update_timer(time_left: float)
 signal change_background(cycle: DayCycle)
 
+
 enum States {
 	BEGINNING,
 	PLAYING,
@@ -23,14 +24,14 @@ enum DayCycle {
 var current_state
 var current_cycle: DayCycle = DayCycle.DAY
 
-var day_duration: float = 180.0 # Duration of the day phase in seconds
-var evening_duration: float = 120.0 # Duration of the evening phase in seconds
-var night_duration: float = 180.0 # Duration of the night phase in seconds
+#var day_duration: float = 180.0 # Duration of the day phase in seconds
+#var evening_duration: float = 120.0 # Duration of the evening phase in seconds
+#var night_duration: float = 180.0 # Duration of the night phase in seconds
 
 # For testing 
-#var day_duration: float = 5.0 # Duration of the day phase in seconds
-#var evening_duration: float = 5.0 # Duration of the evening phase in seconds
-#var night_duration: float = 5.0 # Duration of the night phase in seconds
+var day_duration: float = 5.0 # Duration of the day phase in seconds
+var evening_duration: float = 5.0 # Duration of the evening phase in seconds
+var night_duration: float = 30.0 # Duration of the night phase in seconds
 
 
 var day_timer: Timer 

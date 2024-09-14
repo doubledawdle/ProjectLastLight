@@ -4,8 +4,8 @@
 [ext_resource type="Script" path="res://scripts/main_ui.gd" id="1_oeoc0"]
 [ext_resource type="Texture2D" uid="uid://bx5eswot0hqxx" path="res://Objects/barricade1.png" id="2_buqrb"]
 [ext_resource type="PackedScene" uid="uid://xte5awinp3e7" path="res://scenes/barricade_level_01.tscn" id="3_rgxru"]
-[ext_resource type="PackedScene" uid="uid://c3bwbhyqad652" path="res://scenes/barricade_level_02.tscn" id="5_8lx8h"]
-[ext_resource type="PackedScene" uid="uid://bp28m7o7sdhyw" path="res://scenes/barricade_level_03.tscn" id="6_axsyn"]
+[ext_resource type="PackedScene" uid="uid://slx2stycgvwc" path="res://scenes/barricade_level_02.tscn" id="5_8lx8h"]
+[ext_resource type="PackedScene" uid="uid://d3s1q6qqc85ix" path="res://scenes/barricade_level_03.tscn" id="6_axsyn"]
 
 [node name="Main_UI" type="CanvasLayer"]
 script = ExtResource("1_oeoc0")

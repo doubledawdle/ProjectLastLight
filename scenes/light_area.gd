@@ -16,5 +16,5 @@ func follow_mouse() -> void:
 
 
 func _on_body_entered(body):
-	if body.is_in_group("monsters"):
+	if body.is_in_group("Monsters"):
 		body.take_damage(damage)

@@ -2,6 +2,8 @@ extends Node2D
 
 var notification_timer: Timer = null
 
+@onready var spawner = $Spawner
+
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
@@ -48,3 +50,16 @@ func _on_background_change(curr_cycle: GameStateManager.DayCycle) -> void:
 		$Foreground.texture = load("res://Objects/foreground-Night.png")
 	else:
 		$Foreground.texture = load("res://Objects/foreground (1).png")
+		
+	if curr_cycle == GameStateManager.DayCycle.NIGHT:
+		_start_spawners()
+	else: 
+		_stop_spawners()
+		
+func _start_spawners() -> void:
+	
+	spawner.start_spawning()
+		
+func _stop_spawners() -> void:
+	
+	spawner.stop_spawning()

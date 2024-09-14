@@ -1,8 +1,9 @@
-[gd_scene load_steps=8 format=3 uid="uid://d3s1q6qqc85ix"]
+[gd_scene load_steps=9 format=3 uid="uid://d3s1q6qqc85ix"]
 
 [ext_resource type="Texture2D" uid="uid://cophaahcxdyrw" path="res://Objects/barricade1BP.png" id="1_5xnkl"]
 [ext_resource type="Script" path="res://scripts/barricade.gd" id="2_jgl1n"]
 [ext_resource type="PackedScene" uid="uid://cqtyy6by08pga" path="res://scenes/inventory_item.tscn" id="3_2nkny"]
+[ext_resource type="Texture2D" uid="uid://dolu58yhtq275" path="res://Objects/barricade3BP.png" id="3_i4q60"]
 [ext_resource type="Texture2D" uid="uid://dylyxlrdd1jjp" path="res://Objects/barricade3.png" id="3_qyywq"]
 [ext_resource type="PackedScene" uid="uid://dx2lr2powi77b" path="res://scenes/interactable.tscn" id="5_fx0ay"]
 
@@ -13,11 +14,10 @@ size = Vector2(96, 70.0001)
 size = Vector2(96, 70)
 
 [node name="Barricade_Level_03" type="Sprite2D" groups=["Barricades"]]
-scale = Vector2(0.5, 0.5)
 texture = ExtResource("1_5xnkl")
 offset = Vector2(12, -6)
 script = ExtResource("2_jgl1n")
-blueprint_icon = ExtResource("1_5xnkl")
+blueprint_icon = ExtResource("3_i4q60")
 icon = ExtResource("3_qyywq")
 hitsBeforeDeath = 40
 
@@ -32,7 +32,8 @@ scale = Vector2(1, 0.999999)
 position = Vector2(0, -5)
 shape = SubResource("RectangleShape2D_l37wa")
 
-[node name="EnemyDetection" type="Area2D" parent="."]
+[node name="EnemyDetection" type="Area2D" parent="." groups=["Barricades"]]
+collision_mask = 3
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="EnemyDetection"]
 position = Vector2(0, -5)

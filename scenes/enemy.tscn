@@ -1,28 +1,31 @@
 [gd_scene load_steps=5 format=3 uid="uid://cyvg3qa4nk1s8"]
 
 [ext_resource type="Script" path="res://scenes/enemy.gd" id="1_6r0y7"]
-[ext_resource type="Texture2D" uid="uid://cvvldbb887fh" path="res://Objects/monster.png" id="2_6s41y"]
+[ext_resource type="Texture2D" uid="uid://dr78kiq0v8jip" path="res://Objects/monster (1).png" id="2_ct0dk"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_n21mj"]
-size = Vector2(1070, 461)
+size = Vector2(269, 114)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_fl64r"]
-size = Vector2(1067, 845)
+size = Vector2(270, 209)
 
-[node name="Enemy" type="CharacterBody2D" groups=["Enemies"]]
+[node name="Enemy" type="CharacterBody2D" groups=["Enemies", "Monsters"]]
+collision_mask = 6
 script = ExtResource("1_6r0y7")
 
 [node name="Sprite2D" type="Sprite2D" parent="." groups=["Enemies"]]
-texture = ExtResource("2_6s41y")
+texture = ExtResource("2_ct0dk")
 
 [node name="WorldCollision" type="CollisionShape2D" parent="." groups=["Enemies"]]
-position = Vector2(8, 229.5)
+position = Vector2(-2.5, 57)
 shape = SubResource("RectangleShape2D_n21mj")
 
 [node name="BarricadeDetection" type="Area2D" parent="." groups=["Enemies"]]
+collision_layer = 2
+collision_mask = 5
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="BarricadeDetection" groups=["Enemies"]]
-position = Vector2(6.5, 37.5)
+position = Vector2(-3, 9.5)
 shape = SubResource("RectangleShape2D_fl64r")
 
 [connection signal="area_entered" from="BarricadeDetection" to="." method="_on_barricade_detection_area_entered"]

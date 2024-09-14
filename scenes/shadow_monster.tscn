@@ -1,0 +1,50 @@
+[gd_scene load_steps=4 format=3 uid="uid://cxtg1pdgk8680"]
+
+[ext_resource type="Texture2D" uid="uid://dr78kiq0v8jip" path="res://Objects/monster (1).png" id="1_r7jn4"]
+
+[sub_resource type="GDScript" id="GDScript_dytr3"]
+script/source = "extends CharacterBody2D
+
+
+const SPEED = 25.0
+var isColliding := false
+
+var health := 20
+
+
+func _physics_process(delta: float) -> void:
+
+	# Get the input direction and handle the movement/deceleration.
+	# As good practice, you should replace UI actions with custom gameplay actions.
+	if !isColliding:
+		var direction := Vector2(0,-1)
+		velocity = direction * SPEED
+	else: 
+		velocity = Vector2.ZERO
+
+	move_and_slide()
+
+
+func _on_barricade_detection_area_entered(area: Area2D) -> void:
+	isColliding = true
+
+
+func _on_barricade_detection_area_exited(area: Area2D) -> void:
+	isColliding = false
+"
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_fgvgr"]
+size = Vector2(274, 230)
+
+[node name="ShadowMonster" type="CharacterBody2D"]
+collision_mask = 2
+script = SubResource("GDScript_dytr3")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_r7jn4")
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(1, 7)
+shape = SubResource("RectangleShape2D_fgvgr")
