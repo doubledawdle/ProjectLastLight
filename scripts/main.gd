@@ -7,6 +7,7 @@ var notification_timer: Timer = null
 func _ready() -> void:
 	LocationStateManager.connect("resource_added", Callable(self, "_on_resource_added"))
 	GameStateManager.connect("update_timer", Callable(self, "_on_update_timer"))
+	GameStateManager.connect("change_background", Callable(self, "_on_background_change"))
 	
 	# Create a Timer node for handling when the text disappears
 	notification_timer = Timer.new()
@@ -39,3 +40,11 @@ func _on_update_timer(time_left: float) -> void:
 		timer_label.text = GameStateManager.get_cycle_name(curr_cycle) + ": " + str(minutes).pad_zeros(2) + ":" + str(seconds).pad_zeros(2)
 	else:
 		timer_label.text = "Time's up!"
+		
+func _on_background_change(curr_cycle: GameStateManager.DayCycle) -> void:
+	if (curr_cycle == GameStateManager.DayCycle.EVENING):
+		$Foreground.texture = load("res://Objects/foreground- Evening.png")
+	elif (curr_cycle == GameStateManager.DayCycle.NIGHT):
+		$Foreground.texture = load("res://Objects/foreground-Night.png")
+	else:
+		$Foreground.texture = load("res://Objects/foreground (1).png")
