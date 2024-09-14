@@ -4,6 +4,7 @@ extends Node
 class_name GameState
 
 signal update_timer(time_left: float)
+signal change_background(cycle: DayCycle)
 
 enum States {
 	BEGINNING,
@@ -24,7 +25,7 @@ var current_cycle: DayCycle = DayCycle.DAY
 
 var day_duration: float = 180.0 # Duration of the day phase in seconds
 var evening_duration: float = 120.0 # Duration of the evening phase in seconds
-var night_duration: float = 180 # Duration of the night phase in seconds
+var night_duration: float = 180.0 # Duration of the night phase in seconds
 
 
 var day_timer: Timer 
@@ -68,17 +69,20 @@ func _process(delta: float) -> void:
 		
 			
 func start_day_cycle() -> void:
+	emit_signal("change_background", DayCycle.DAY)
 	current_cycle = DayCycle.DAY
 	start_phase(day_duration, "_on_day_phase_complete")
 	print("day started")
 	
 # Starts the evening phase
 func start_evening_phase() -> void:
+	emit_signal("change_background", DayCycle.EVENING)
 	current_cycle = DayCycle.EVENING
 	start_phase(evening_duration, "_on_evening_phase_complete")
 	
 # Starts the night phase
 func start_night_phase() -> void:
+	emit_signal("change_background", DayCycle.NIGHT)
 	current_cycle = DayCycle.NIGHT
 	start_phase(night_duration, "_on_night_phase_complete")
 	
