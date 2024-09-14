@@ -1,4 +1,4 @@
-[gd_scene load_steps=7 format=3 uid="uid://bp28m7o7sdhyw"]
+[gd_scene load_steps=8 format=3 uid="uid://d3s1q6qqc85ix"]
 
 [ext_resource type="Texture2D" uid="uid://cophaahcxdyrw" path="res://Objects/barricade1BP.png" id="1_5xnkl"]
 [ext_resource type="Script" path="res://scripts/barricade.gd" id="2_jgl1n"]
@@ -6,24 +6,37 @@
 [ext_resource type="Texture2D" uid="uid://dylyxlrdd1jjp" path="res://Objects/barricade3.png" id="3_qyywq"]
 [ext_resource type="PackedScene" uid="uid://dx2lr2powi77b" path="res://scenes/interactable.tscn" id="5_fx0ay"]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_ubnm7"]
-size = Vector2(16.4, 22.6667)
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_l37wa"]
+size = Vector2(96, 70.0001)
 
-[node name="Barricade_Level_03" type="Sprite2D"]
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_2ynbu"]
+size = Vector2(96, 70)
+
+[node name="Barricade_Level_03" type="Sprite2D" groups=["Barricades"]]
 scale = Vector2(0.5, 0.5)
 texture = ExtResource("1_5xnkl")
 offset = Vector2(12, -6)
 script = ExtResource("2_jgl1n")
 blueprint_icon = ExtResource("1_5xnkl")
 icon = ExtResource("3_qyywq")
+hitsBeforeDeath = 40
 
 [node name="InventoryItem" parent="." node_paths=PackedStringArray("interactable") instance=ExtResource("3_2nkny")]
 scale = Vector2(5, 3)
 interactable = NodePath("../Interactable")
 
 [node name="Interactable" parent="." instance=ExtResource("5_fx0ay")]
-scale = Vector2(5, 3)
+scale = Vector2(1, 0.999999)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Interactable"]
-position = Vector2(-0.600001, -2)
-shape = SubResource("RectangleShape2D_ubnm7")
+position = Vector2(0, -5)
+shape = SubResource("RectangleShape2D_l37wa")
+
+[node name="EnemyDetection" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="EnemyDetection"]
+position = Vector2(0, -5)
+shape = SubResource("RectangleShape2D_2ynbu")
+
+[connection signal="area_entered" from="EnemyDetection" to="." method="_on_enemy_detection_area_entered"]
+[connection signal="area_exited" from="EnemyDetection" to="." method="_on_enemy_detection_area_exited"]
