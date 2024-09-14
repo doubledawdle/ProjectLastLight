@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://g4m1wk4rsy17"
+path="res://.godot/imported/lights-flicker-on-and-some-electrical-noises-33079 (1).wav-0c3295ee5170f73d5b12a81d6fbab7e7.sample"
+
+[deps]
+
+source_file="res://Audio/lights-flicker-on-and-some-electrical-noises-33079 (1).wav"
+dest_files=["res://.godot/imported/lights-flicker-on-and-some-electrical-noises-33079 (1).wav-0c3295ee5170f73d5b12a81d6fbab7e7.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=3
+edit/loop_begin=0
+edit/loop_end=593945
+compress/mode=0

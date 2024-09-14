@@ -58,7 +58,7 @@ var resources = {
 	ResourceType.NAILS: 0,
 	ResourceType.ROPE: 0,
 	ResourceType.BRICKS: 0,
-	ResourceType.FUEL: 0,
+	ResourceType.FUEL: 5,
 	ResourceType.PLAYER: 1,
 	ResourceType.VILLAGERS: 3,
 }
@@ -80,7 +80,7 @@ func remove_resource(resource_type, amount):
 		resources[resource_type] -= amount
 		if resources[resource_type] < 0:
 			resources[resource_type] = 0
-			emit_signal("resource_changed", resource_type)
+		emit_signal("resource_changed", resource_type)
 		
 func get_resource_amount(resource_type):
 	return resources.get(resource_type, 0)

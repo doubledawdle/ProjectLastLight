@@ -27,6 +27,11 @@ var day_duration: float = 180.0 # Duration of the day phase in seconds
 var evening_duration: float = 120.0 # Duration of the evening phase in seconds
 var night_duration: float = 180.0 # Duration of the night phase in seconds
 
+# For testing 
+#var day_duration: float = 5.0 # Duration of the day phase in seconds
+#var evening_duration: float = 5.0 # Duration of the evening phase in seconds
+#var night_duration: float = 5.0 # Duration of the night phase in seconds
+
 
 var day_timer: Timer 
 var remaining_time: float = 0.0

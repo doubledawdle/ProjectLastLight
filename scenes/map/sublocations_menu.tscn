@@ -60,6 +60,7 @@ offset_bottom = -224.0
 label_settings = SubResource("LabelSettings_vxlas")
 
 [node name="sublocation1" type="TextureButton" parent="Panel"]
+layout_mode = 0
 offset_left = -235.0
 offset_top = -171.0
 offset_right = 1685.0
