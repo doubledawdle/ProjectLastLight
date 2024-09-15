@@ -9,6 +9,7 @@ var obj
 var instance: Node2D
 #@onready var game_state: GameState = $"../GameStateManager"
 @onready var light_area = preload("res://scenes/light_area.tscn")
+@onready var game_over_scene = preload("res://scenes/game_over.tscn")
 var active_light = null
 
 var fuel_drain_rate: float = 1.0
@@ -83,7 +84,7 @@ func drain_fuel(delta: float) -> void:
 		# Only remove the amount of fuel needed for this frame
 	ResourceInventory.remove_resource(ResourceInventory.ResourceType.FUEL, fuel_to_drain)
 		
-	print("Fuel remaining: ", ResourceInventory.get_resource_amount(ResourceInventory.ResourceType.FUEL))
+	
 	
 		
 func turn_off_light() -> void:
@@ -107,3 +108,6 @@ func _on_area_2d_area_exited(area: Area2D) -> void:
 func die() -> void:
 	print("GAME OVER")
 	GameStateManager.enter_beginning_state()
+	GameStateManager.end_game()
+	var game_over_instance = game_over_scene.instantiate()
+	get_node("/root").add_child(game_over_instance)

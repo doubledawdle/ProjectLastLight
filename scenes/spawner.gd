@@ -1,7 +1,7 @@
 extends Node2D
 
 @export var enemy_scene: PackedScene
-@export var spawn_rate := 2.0
+@export var spawn_rate := 5.0
 var spawn_timer: Timer
 #var enemy_scene := preload("res://scenes/enemy.tscn")
 var spawn_points := []
@@ -11,6 +11,7 @@ var spawn_points := []
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
+	GameStateManager.connect("increase_difficulty", Callable(self, "_increase_difficulty"))
 	for i in get_children():
 		if i is Marker2D:
 			spawn_points.append(i)
@@ -40,6 +41,12 @@ func start_spawning() -> void:
 	
 func stop_spawning() -> void:
 	spawn_timer.stop()
+	
+func _increase_difficulty() -> void: 
+	print(" enemy difficulty increasing")
+	if spawn_rate == 2:
+		return
+	spawn_rate -= 1
 
 
 #func _on_timer_timeout():

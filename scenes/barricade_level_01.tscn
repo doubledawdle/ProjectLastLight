@@ -19,6 +19,7 @@ script = ExtResource("2_o5ncm")
 blueprint_icon = ExtResource("1_pn38f")
 icon = ExtResource("1_gfppi")
 hitsBeforeDeath = 10
+barricade_level = 1
 
 [node name="InventoryItem" parent="." node_paths=PackedStringArray("interactable") instance=ExtResource("2_2n3aj")]
 scale = Vector2(5, 3)

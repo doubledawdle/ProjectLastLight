@@ -1,59 +1,100 @@
-[gd_scene load_steps=7 format=3 uid="uid://e7562cjsv7yq"]
+[gd_scene load_steps=10 format=3 uid="uid://e7562cjsv7yq"]
 
 [ext_resource type="PackedScene" uid="uid://f8y557b1jr5h" path="res://scenes/spawn_button.tscn" id="1_nuhjk"]
 [ext_resource type="Script" path="res://scripts/main_ui.gd" id="1_oeoc0"]
+[ext_resource type="Script" path="res://scripts/spawn_object.gd" id="2_6iuko"]
 [ext_resource type="Texture2D" uid="uid://bx5eswot0hqxx" path="res://Objects/barricade1.png" id="2_buqrb"]
 [ext_resource type="PackedScene" uid="uid://xte5awinp3e7" path="res://scenes/barricade_level_01.tscn" id="3_rgxru"]
 [ext_resource type="PackedScene" uid="uid://slx2stycgvwc" path="res://scenes/barricade_level_02.tscn" id="5_8lx8h"]
+[ext_resource type="Texture2D" uid="uid://bwpv0ydygro8h" path="res://Objects/barricade2.png" id="5_mmnkm"]
 [ext_resource type="PackedScene" uid="uid://d3s1q6qqc85ix" path="res://scenes/barricade_level_03.tscn" id="6_axsyn"]
+[ext_resource type="Texture2D" uid="uid://dylyxlrdd1jjp" path="res://Objects/barricade3.png" id="7_exkim"]
 
 [node name="Main_UI" type="CanvasLayer"]
 script = ExtResource("1_oeoc0")
 
 [node name="CraftingPanel" type="Panel" parent="."]
-offset_left = 859.0
-offset_top = 987.0
-offset_right = 1056.0
-offset_bottom = 1027.0
+offset_left = 678.0
+offset_top = 949.0
+offset_right = 1364.0
+offset_bottom = 1078.0
 
-[node name="Spawn_Button" parent="CraftingPanel" instance=ExtResource("1_nuhjk")]
+[node name="Spawn_Button" type="Button" parent="CraftingPanel"]
 clip_contents = true
 layout_mode = 1
-offset_left = -33.0
-offset_top = -14.0
-offset_right = -105.0
-offset_bottom = 11.0
-focus_mode = 0
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -1.0
+offset_top = -37.0
+offset_right = -479.0
+offset_bottom = -37.0
+grow_horizontal = 2
+grow_vertical = 2
 icon = ExtResource("2_buqrb")
 flat = true
 icon_alignment = 1
 expand_icon = true
+script = ExtResource("2_6iuko")
 object_to_spawn = ExtResource("3_rgxru")
+barricade_level = "level_1"
+
+[node name="Label" type="Label" parent="CraftingPanel/Spawn_Button"]
+layout_mode = 0
+offset_left = 40.0
+offset_top = 100.0
+offset_right = 160.0
+offset_bottom = 149.0
+text = "3 Wood 4 Nails"
 
 [node name="Spawn_Button2" parent="CraftingPanel" instance=ExtResource("1_nuhjk")]
 clip_contents = true
 layout_mode = 1
-offset_left = 41.0
-offset_top = -14.0
-offset_right = -31.0
-offset_bottom = 11.0
+offset_left = 215.0
+offset_top = -41.0
+offset_right = -220.0
+offset_bottom = -16.0
 focus_mode = 0
-icon = ExtResource("2_buqrb")
+icon = ExtResource("5_mmnkm")
 flat = true
 icon_alignment = 1
 expand_icon = true
 object_to_spawn = ExtResource("5_8lx8h")
+barricade_level = "level_2"
+
+[node name="Label2" type="Label" parent="CraftingPanel/Spawn_Button2"]
+layout_mode = 0
+offset_left = 57.0
+offset_top = 103.0
+offset_right = 171.0
+offset_bottom = 178.0
+text = "8 Wood 6 Nails
+1 Metal"
 
 [node name="Spawn_Button3" parent="CraftingPanel" instance=ExtResource("1_nuhjk")]
 clip_contents = true
 layout_mode = 1
-offset_left = 116.0
-offset_top = -14.0
-offset_right = 44.0
-offset_bottom = 11.0
+offset_left = 406.0
+offset_top = -30.0
+offset_right = 62.0
+offset_bottom = -5.0
 focus_mode = 0
-icon = ExtResource("2_buqrb")
+icon = ExtResource("7_exkim")
 flat = true
 icon_alignment = 1
 expand_icon = true
 object_to_spawn = ExtResource("6_axsyn")
+barricade_level = "level_3"
+
+[node name="Label3" type="Label" parent="CraftingPanel/Spawn_Button3"]
+layout_mode = 0
+offset_left = 100.0
+offset_top = 95.0
+offset_right = 233.0
+offset_bottom = 170.0
+text = "15 Wood 15 Nails
+4 Metal"
+
+[connection signal="pressed" from="CraftingPanel/Spawn_Button" to="CraftingPanel/Spawn_Button" method="_on_pressed"]
+[connection signal="pressed" from="CraftingPanel/Spawn_Button2" to="CraftingPanel/Spawn_Button2" method="_on_pressed"]
+[connection signal="pressed" from="CraftingPanel/Spawn_Button3" to="CraftingPanel/Spawn_Button3" method="_on_pressed"]

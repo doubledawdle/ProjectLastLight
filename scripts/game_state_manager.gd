@@ -5,6 +5,7 @@ class_name GameState
 
 signal update_timer(time_left: float)
 signal change_background(cycle: DayCycle)
+signal increase_difficulty()
 
 
 enum States {
@@ -24,14 +25,14 @@ enum DayCycle {
 var current_state
 var current_cycle: DayCycle = DayCycle.DAY
 
-#var day_duration: float = 180.0 # Duration of the day phase in seconds
-#var evening_duration: float = 120.0 # Duration of the evening phase in seconds
-#var night_duration: float = 180.0 # Duration of the night phase in seconds
+var day_duration: float = 120.0 # Duration of the day phase in seconds
+var evening_duration: float = 60.00 # Duration of the evening phase in seconds
+var night_duration: float = 120.0 # Duration of the night phase in seconds
 
 # For testing 
-var day_duration: float = 5.0 # Duration of the day phase in seconds
-var evening_duration: float = 5.0 # Duration of the evening phase in seconds
-var night_duration: float = 30.0 # Duration of the night phase in seconds
+#var day_duration: float = 5.0 # Duration of the day phase in seconds
+#var evening_duration: float = 5.0 # Duration of the evening phase in seconds
+#var night_duration: float = 30.0 # Duration of the night phase in seconds
 
 
 var day_timer: Timer 
@@ -73,12 +74,15 @@ func _process(delta: float) -> void:
 	else:
 		emit_signal("update_timer", 0)  # Emit zero when time is up
 		
+		
 			
 func start_day_cycle() -> void:
 	emit_signal("change_background", DayCycle.DAY)
 	current_cycle = DayCycle.DAY
 	start_phase(day_duration, "_on_day_phase_complete")
 	print("day started")
+	if (days_survived > 0 and (days_survived % 2 == 0)):
+		emit_signal("increase_difficulty")
 	
 # Starts the evening phase
 func start_evening_phase() -> void:
@@ -152,4 +156,18 @@ func get_current_state() -> States:
 	
 func start_day_timer() -> void:
 	day_timer = Timer.new()
+	
+func get_days_survived() -> int:
+	return days_survived
+	
+func end_game() -> void: 
+	if day_timer and is_instance_valid(day_timer): 
+		day_timer.queue_free()
+	current_state = States.BEGINNING
+	current_cycle = DayCycle.DAY
+	for enemy in get_tree().get_nodes_in_group("Monsters"):
+		enemy.queue_free()
+	
+	
+	print("Game Over. Cleanup complete.")
 	

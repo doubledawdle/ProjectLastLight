@@ -7,7 +7,7 @@
 size = Vector2(269, 114)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_fl64r"]
-size = Vector2(270, 209)
+size = Vector2(270, 142)
 
 [node name="Enemy" type="CharacterBody2D" groups=["Enemies", "Monsters"]]
 collision_mask = 6
@@ -25,7 +25,7 @@ collision_layer = 2
 collision_mask = 5
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="BarricadeDetection" groups=["Enemies"]]
-position = Vector2(-3, 9.5)
+position = Vector2(-3, 43)
 shape = SubResource("RectangleShape2D_fl64r")
 
 [connection signal="area_entered" from="BarricadeDetection" to="." method="_on_barricade_detection_area_entered"]

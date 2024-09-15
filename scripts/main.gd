@@ -50,6 +50,7 @@ func _on_background_change(curr_cycle: GameStateManager.DayCycle) -> void:
 		$Foreground.texture = load("res://Objects/foreground-Night.png")
 	else:
 		$Foreground.texture = load("res://Objects/foreground (1).png")
+		despawn_all_enemies()
 		
 	if curr_cycle == GameStateManager.DayCycle.NIGHT:
 		_start_spawners()
@@ -63,3 +64,7 @@ func _start_spawners() -> void:
 func _stop_spawners() -> void:
 	
 	spawner.stop_spawning()
+
+func despawn_all_enemies() -> void:
+	for enemy in get_tree().get_nodes_in_group("Monsters"):
+		enemy.queue_free()

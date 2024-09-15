@@ -4,7 +4,10 @@ extends CharacterBody2D
 const SPEED = 25.0
 var isColliding := false
 
-var health := 20
+var health := 40
+
+func _ready():
+	GameStateManager.connect("increase_difficulty", Callable(self, "_increase_difficulty"))
 
 
 func _physics_process(delta: float) -> void:
@@ -38,3 +41,9 @@ func take_damage(damage: int) -> void:
 
 func die() -> void: 
 	queue_free()
+	
+func _increase_difficulty() -> void:
+	print("difficulty increasing")
+	if health == 100: 
+		return 
+	health += 20

@@ -58,7 +58,7 @@ var resources = {
 	ResourceType.NAILS: 0,
 	ResourceType.ROPE: 0,
 	ResourceType.BRICKS: 0,
-	ResourceType.FUEL: 5,
+	ResourceType.FUEL: 40,
 	ResourceType.PLAYER: 1,
 	ResourceType.VILLAGERS: 3,
 }

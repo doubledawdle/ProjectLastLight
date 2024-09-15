@@ -9,7 +9,7 @@ anchors_preset = 0
 script = ExtResource("1_b6wdb")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-position = Vector2(961, 537)
+position = Vector2(963, 539)
 texture = ExtResource("2_81uou")
 
 [node name="MarginContainer" type="MarginContainer" parent="."]
