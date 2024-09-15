@@ -4,7 +4,7 @@ extends CharacterBody2D
 const SPEED = 25.0
 var isColliding := false
 
-var health := 40
+var health := 60
 
 func _ready():
 	GameStateManager.connect("increase_difficulty", Callable(self, "_increase_difficulty"))

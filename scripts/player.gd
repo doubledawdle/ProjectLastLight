@@ -27,12 +27,17 @@ func _ready() -> void:
 
 
 func _process(delta: float) -> void:
-	if Input.is_action_just_pressed("Map") and (GameStateManager.get_current_cycle() != GameStateManager.DayCycle.EVENING and GameStateManager.get_current_cycle() != GameStateManager.DayCycle.NIGHT):
-		if instance == null:
-			GameStateManager.enter_scavenging_state()
-			instance = obj.instantiate()
-			get_node("/root").add_child(instance)
-		else:
+	if GameStateManager.get_current_cycle() == GameStateManager.DayCycle.DAY:
+		if Input.is_action_just_pressed("Map"):
+			if instance == null:
+				GameStateManager.enter_scavenging_state()
+				instance = obj.instantiate()
+				get_node("/root").add_child(instance)
+			else:
+				GameStateManager.enter_playing_state()
+				get_node(instance.get_path()).queue_free()
+	else:
+		if instance != null:
 			GameStateManager.enter_playing_state()
 			get_node(instance.get_path()).queue_free()
 			

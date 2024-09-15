@@ -7,7 +7,7 @@ var is_enemy_inside = false
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	damage_timer = Timer.new()
-	damage_timer.wait_time = 0.2  # Time between each damage application
+	damage_timer.wait_time = 0.3  # Time between each damage application
 	damage_timer.one_shot = false
 	damage_timer.connect("timeout", Callable(self, "_apply_damage"))
 	add_child(damage_timer)

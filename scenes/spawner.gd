@@ -1,7 +1,7 @@
 extends Node2D
 
 @export var enemy_scene: PackedScene
-@export var spawn_rate := 5.0
+@export var spawn_rate := 4.0
 var spawn_timer: Timer
 #var enemy_scene := preload("res://scenes/enemy.tscn")
 var spawn_points := []
